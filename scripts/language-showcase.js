@@ -31,59 +31,18 @@ function selectLanguage(selectedLanguage) {
 function setLanguageInfo(language) {
   switch (language.getElementsByTagName("p")[1].textContent) {
 
-    case "Python":
+    case "Starting":
       languageInfoBox.innerHTML = `
-        <div class="progress-bars">
-          <div class="chart">
-            <span>Confidence:</span>
-            <footer>
-              <div class="progress-bar" id="confidence-bar"></div>
-            </footer>
-          </div>
-          <div class="chart">
-            <span>Enjoyment:</span>
-            <footer>
-              <div class="progress-bar" id="enjoyment-bar"></div>
-            </footer>
-          </div>
-        </div>
         <p class="language-description">
-            Python was the second language I learned. It's the one I'm most comfortable with, and 
-            I've used it to make a variety of things.
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
           </p>
-        <div class="example-projects">
-          <div class="project" id="project1">
-            <div class="project-inner">
-              <div class="project-top">
-                <a href="https://jacksonelia.github.io/random-project.html#Mazer">
-                  <span>Mazer</span>
-                </a>
-                <p>Make a maze and watch as it is solved!</p>
-              </div>
-              <div class="project-bottom">
-                <p>PyQt5</p>
-                <a href="https://github.com/jacksonelia/Mazer" target="_blank">
-                  <i class="ion-social-github-outline"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project" id="project2">
-            <div class="project-inner">
-              <div class="project-top">
-                <a href="https://jacksonelia.github.io/random-project.html#DCS_Terminal">
-                  <span>DCS Terminal</span>
-                </a>
-                <p>Automatically solves any course on Datacamp!</p>
-              </div>
-              <div class="project-bottom">
-                <p>Selenium</p>
-                <a href="https://github.com/jacksonelia/DCS_Terminal" target="_blank">
-                  <i class="ion-social-github-outline"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          <div class="container">
+       <h1 class="container-h1">Enter what you've found here...</h1>
+          <form action="#">
+            <input type="text" placeholder="Enter Password">
+            <a class="button1" href="mailto:jackgeorgeelia@gmail.com"><span
+              class="button1span">Test your fate</span></a>
+          </form>
         </div>
       `;
       // Sets the length of the bars

@@ -180,7 +180,9 @@ hr {
   h1 {
     font-size: 15vw;
   }
-
+  h2 {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -191,7 +193,8 @@ hr {
     background-image: none;
   }
   h2 {
-    font-size: 11vw;
+    padding-top: 50px;
+    font-size: 30px;
   }
 
   p {
@@ -203,4 +206,75 @@ hr {
     margin-bottom: 20px;
   }
 
-}
+
+  }
+
+  .container{
+    top: -400px;
+    width: 300px;
+    padding: 0px 0px;
+    background: transparent;
+    color: #fff;
+    margin-top: 0;
+  input, label {
+    width: 100%;
+    display: inline;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+    border: 1px solid rgba(255, 57, 57, 0.6);
+    background: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    color: #fff;
+    outline: none;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+    label {
+      padding: 0;
+      background: none;
+      border: none;
+    
+    input {
+      display: flex;
+      width: auto;
+      padding: 0;
+      margin: 0;
+    }
+    }
+    button {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      font-weight: bold;
+      background: #000000;
+      border: none;
+      box-shadow: 0 4px 5px rgba(254, 58, 58, 0.3);
+      color: rgba(255,255,255,0.7);
+      transition: all 0.15s ease;
+      position: relative;
+      top: 10px;
+      &:hover {
+      color: rgba(255,255,255,0.9);
+      box-shadow: 0 6px 10px 2px rgba(255, 83, 83, 0.3);
+        
+      }
+      &:active {
+        top: 1px;
+      }
+    }
+    p {
+      text-align: right;
+      a {
+        color: rgba(255,255,255,0.7);
+        font-size: .75rem;
+        transition: all 0.15s ease;
+        &:hover {
+        color: white;
+        }
+      }
+    }
+  }
+  .container-h1 {
+    font-size: 25px;
+  }
