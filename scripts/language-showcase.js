@@ -3,9 +3,6 @@ let languageInfoBox = document.getElementsByClassName("outer-language-info-box")
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
     "--mainColor");
 
-// Sets Python as selected as default
-selectLanguage(languages[0]);
-
 // Iterates through the languages and formats the page based on the selected one
 function selectLanguage(selectedLanguage) {
   for (const language of languages) {
