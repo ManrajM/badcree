@@ -1,5 +1,5 @@
 const dynamicText = document.getElementById("typing-mode");
-const words = ["Understanding Cryptids", "A field guide to the various cryptids of the world", "Designed By... ", "Manraj M, Tegvir S, Jashan H, Dilshaan R, Aiyush , Joshua D."];
+const words = ["Understanding Cryptids", "A field guide to the various cryptids of the world", "Designed By... ", "Manraj M, Tegvir S, Jashan H, Dilshaan R, Aiyush P, Joshua D."];
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;
 let charIndex = 0;
