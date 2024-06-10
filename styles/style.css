@@ -228,6 +228,8 @@ hr {
     background: transparent;
     color: #fff;
     margin-top: 0;
+    position: relative;
+    z-index: 10;
   input, label {
     width: 100%;
     z-index: initial;
