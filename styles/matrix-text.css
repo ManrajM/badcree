@@ -7,21 +7,21 @@
 
 #matrix-text h1 {
   z-index: 2;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
+  position: absolute!important;
+  top: 50%!important;
+  left: 50%!important;
+  transform: translate(-50%, -50%)!important;
+  margin: 0!important;
   font-size: 8vw;
 }
 #matrix-text h2 {
   z-index: 2;
-  position: absolute !important;
+  position: absolute!important;
   text-align: center;
-  top: 60% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 1 !important;
+  top: 60%!important;
+  left: 50%!important;
+  transform: translate(-50%, -50%)!important;
+  margin: 1!important;
   font-size: 2.5vw;
 }
 .matrix-scroll {
@@ -34,11 +34,7 @@
 
 .matrix-scroll-shiny {
   width: 25px;
-  background-image: linear-gradient(
-    to top,
-    var(--secondaryThemeColor) 0%,
-    var(--themeColor) 100%
-  );
+  background-image: linear-gradient(to top, var(--secondaryThemeColor) 0%, var(--themeColor) 100%);
   position: absolute;
   mix-blend-mode: screen;
 }
@@ -60,24 +56,15 @@
   font-size: 16px;
   color: var(--themeColor);
   white-space: nowrap;
-  animation: typing 2.5s steps(18, end) forwards;
+  animation:
+          typing 2.5s steps(18, end) forwards;
 }
 
 @keyframes typing {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 0;
-  }
-  99.9% {
-    width: 100%;
-    border-right: 3px solid var(--themeColor);
-  }
-  100% {
-    width: 100%;
-    border-right: 3px solid var(--mainColor);
-  }
+  0% {width: 0}
+  50% { width: 0}
+  99.9% { width: 100% ; border-right: 3px solid var(--themeColor) }
+  100% { width: 100%; border-right: 3px solid var(--mainColor) }
 }
 
 #matrix-speed-slider {
@@ -109,7 +96,9 @@
 }
 
 @media (max-width: 820px) {
+
   #matrix-text h1 {
     font-size: 15vw;
   }
+
 }
