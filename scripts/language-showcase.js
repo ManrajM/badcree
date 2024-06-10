@@ -32,18 +32,9 @@ function setLanguageInfo(language) {
   switch (language.getElementsByTagName("p")[1].textContent) {
 
     case "Starting":
-      languageInfoBox.innerHTML = `
-      <p class="language-description">
-      Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
-    </p>
-    <div class="container">
- <h1 class="container-h1">Enter what you've found here...</h1>
-    <form id="login-form-1">
-      <input type="text" placeholder="Enter Password" id="password-1">
-      <button type="submit" class="button1">Test your fate</button>
-    </form>
-  </div>
-      `;
+      // languageInfoBox.innerHTML = `
+      
+      // `;
       // Sets the length of the bars
       document.getElementById("confidence-bar").style.cssText = "width: 100%;";
       document.getElementById("enjoyment-bar").style.cssText = "width: 100%;";
