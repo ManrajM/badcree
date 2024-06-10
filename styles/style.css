@@ -230,6 +230,7 @@ hr {
     margin-top: 0;
   input, label {
     width: 100%;
+    z-index: initial;
     position: inherit;
     display: inline;
     margin-bottom: 15px;
@@ -239,6 +240,7 @@ hr {
     box-sizing: border-box;
     color: #fff;
     outline: none;
+    -webkit-user-select: text;
     &::placeholder {
       color: rgba(255, 255, 255, 0.5);
     }
