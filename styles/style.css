@@ -230,7 +230,7 @@ hr {
     margin-top: 0;
   input, label {
     width: 100%;
-    z-index: 40;
+    position: inherit;
     display: inline;
     margin-bottom: 15px;
     padding: 10px 10px;
