@@ -638,3 +638,10 @@ input[type="radio"]:focus+label:before {
 .formerize-placeholder {
 	color: #909498 !important;
 }
+
+
+#password-1 {
+  border-color: #fd3636;
+  position: relative;
+  z-index: 2;
+}
