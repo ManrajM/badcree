@@ -309,3 +309,7 @@ p a:hover {
 .container-h1 {
   font-size: 25px;
 }
+
+.copyright {
+  text-align: center;
+}
