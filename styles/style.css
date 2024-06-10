@@ -228,12 +228,12 @@ hr {
     background: transparent;
     color: #fff;
     margin-top: 0;
-    position: relative;
+    position: absolute;
     z-index: 10;
   input, label {
     width: 100%;
     z-index: initial;
-    position: inherit;
+    position: relative;
     display: inline;
     margin-bottom: 15px;
     padding: 10px 10px;
