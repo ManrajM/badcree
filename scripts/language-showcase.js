@@ -1,3 +1,7 @@
+const password1 = "joe";
+const password2 = "p2";
+const password3 = "p3";
+
 let languages = document.getElementsByClassName("language");
 let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0] // Theres only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
@@ -36,13 +40,21 @@ function setLanguageInfo(language) {
           </p>
           <div class="container">
        <h1 class="container-h1">Enter what you've found here...</h1>
-          <form id="login-form-1">
             <input type="text" placeholder="Enter Password" id="password-1">
-            <button type="submit" class="button11">Test your fate</button>
-          </form>
+            <button type="button" class="button11" id ="newbutt" >Test your fate</button>
         </div>
       </div>
       `;
+      document.getElementById("newbutt").addEventListener("click", function (event){
+        event.preventDefault();
+        const inputPassword = document.getElementById("password-1").value;
+        console.log(inputPassword)
+        if (inputPassword.toLowerCase() === password1) {
+            alert("hello")
+        } else {
+            alert("Incorrect password!");
+        }
+    });
       // Sets the length of the bars
       break;
 
@@ -226,3 +238,26 @@ function setLanguageInfo(language) {
       break;
   }
 }
+
+
+document.getElementById("login-form-2").addEventListener("submit", function (event){
+    event.preventDefault();
+    const inputPassword = document.getElementById("password-2").value;
+    if (inputPassword === password2.toLowerCase) {
+        document.getElementById("tab-2").classList.add("hidden");
+        document.getElementById("tab-3").classList.remove("hidden");
+    } else {
+        alert("Incorrect password!");
+    }
+});
+
+document.getElementById("login-form-3").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const inputPassword = document.getElementById("password-3").value;
+    if (inputPassword === password3.toLowerCase) {
+        document.getElementById("tab-3").classList.add("hidden");
+        document.getElementById("tab-4").classList.remove("hidden");
+    } else {
+        alert("Incorrect password!");
+    }
+});
