@@ -217,6 +217,10 @@ hr {
     cursor: pointer;
     outline: transparent;
   }
+
+  input[type="text"]{
+    text-transform: lowercase;
+  }
   .container{
     top: -400px;
     width: 300px;
