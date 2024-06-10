@@ -36,8 +36,6 @@ function setLanguageInfo(language) {
       
       // `;
       // Sets the length of the bars
-      document.getElementById("confidence-bar").style.cssText = "width: 100%;";
-      document.getElementById("enjoyment-bar").style.cssText = "width: 100%;";
       break;
 
     case "Java":
