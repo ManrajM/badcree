@@ -10,7 +10,6 @@ document.getElementById("login-form-1").addEventListener("submit", (e) => {
     const inputPassword = document.getElementById("password-1").value;
     if (inputPassword === password1) {
         alert("Here is a letter you should remember: H");
-       selectLanguage(languages[1])
     } else {
         alert("Incorrect password!");
     }
