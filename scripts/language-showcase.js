@@ -1,4 +1,4 @@
-const password1 = "joe";
+const password1 = "⊳x⊳୮Ĺo";
 const password2 = "p2";
 const password3 = "p3";
 
@@ -32,7 +32,7 @@ function selectLanguage(selectedLanguage) {
 function setLanguageInfo(language) {
   switch (language.getElementsByTagName("p")[1].textContent) {
 
-    case "Starting":
+    case "Inception":
       languageInfoBox.innerHTML = `
       <div class = "form-fields-text">
           <p class="language-description">
@@ -49,7 +49,7 @@ function setLanguageInfo(language) {
         event.preventDefault();
         const inputPassword = document.getElementById("password-1").value;
         console.log(inputPassword)
-        if (inputPassword.toLowerCase() === password1) {
+        if (inputPassword === password1) {
             alert("hello")
         } else {
             alert("Incorrect password!");
