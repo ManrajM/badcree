@@ -1,11 +1,15 @@
 :root {
   --mainColor: #121212;
-  --themeColor: #FF325A;
-  --secondaryThemeColor: #FF6229;
+  --themeColor: #ff325a;
+  --secondaryThemeColor: #ff6229;
 }
 
 .button1 {
-  background-image: linear-gradient(to right, var(--secondaryThemeColor) 0%, var(--themeColor) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--secondaryThemeColor) 0%,
+    var(--themeColor) 100%
+  );
   border-radius: 12px;
   box-sizing: border-box;
   display: block;
@@ -61,9 +65,12 @@
   }
 }
 
-
 .button11 {
-  background-image: linear-gradient(to right, var(--secondaryThemeColor) 0%, var(--themeColor) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--secondaryThemeColor) 0%,
+    var(--themeColor) 100%
+  );
   border-radius: 12px;
   box-sizing: border-box;
   display: block;

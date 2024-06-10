@@ -11,7 +11,10 @@
 
 .random-project-title i {
   font-size: 80px;
-  background: -webkit-linear-gradient(var(--secondaryThemeColor), var(--themeColor));
+  background: -webkit-linear-gradient(
+    var(--secondaryThemeColor),
+    var(--themeColor)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -78,7 +81,7 @@ iframe {
   background-color: var(--blendedColor);
   font-size: 80px;
   font-family: arial, helvetica, sans-serif;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .scroll-button:hover {
@@ -99,7 +102,7 @@ iframe {
 .additional-project-item {
   height: 180px;
   min-width: 180px;
-  background-color: var(--secondaryColor)
+  background-color: var(--secondaryColor);
 }
 
 .additional-project-image {
@@ -111,8 +114,9 @@ iframe {
 .project-icon-image {
   height: 100%;
   width: 100%;
-  transition: .4s;
-  filter: sepia(100%) saturate(150%) brightness(60%) hue-rotate(var(--filterColor));
+  transition: 0.4s;
+  filter: sepia(100%) saturate(150%) brightness(60%)
+    hue-rotate(var(--filterColor));
 }
 
 .project-icon-image:hover {
@@ -124,7 +128,6 @@ ol li::marker {
 }
 
 @media screen and (max-width: 1000px) {
-
   .project-icon-image {
     filter: none;
   }
@@ -139,7 +142,7 @@ ol li::marker {
 
   .random-project-second-block p {
     padding-top: 6%;
-    padding-bottom: 1%  ;
+    padding-bottom: 1%;
   }
 
   .random-project-text-video iframe {
@@ -164,12 +167,9 @@ ol li::marker {
     overflow-x: auto;
     width: 100%;
   }
-
 }
 
 @media screen and (max-width: 800px) {
-
-
   .random-project-sixth-block {
     height: 65vw;
   }
@@ -202,12 +202,11 @@ ol li::marker {
     width: 100%;
     height: 100%;
   }
-
 }
 
 @media screen and (max-width: 600px) {
-
-  .page-section h2, .random-project-title i {
+  .page-section h2,
+  .random-project-title i {
     font-size: 11vw;
   }
 
@@ -224,7 +223,8 @@ ol li::marker {
     font-size: 7.2vw;
   }
 
-  p, .thing-learned-item {
+  p,
+  .thing-learned-item {
     font-size: 5vw;
   }
 
@@ -240,5 +240,4 @@ ol li::marker {
   .call-to-action-box {
     margin-top: 23px;
   }
-
 }
