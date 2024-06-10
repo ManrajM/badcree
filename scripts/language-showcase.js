@@ -1,4 +1,5 @@
-let languages = document.getElementsByClassName("outer-language-info-box");
+let languages = document.getElementsByClassName("language");
+let languageInfoBox = document.getElementsByClassName("language-info-box")[0] // Theres only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
     "--mainColor");
 
@@ -49,7 +50,7 @@ function setLanguageInfo(language) {
       break;
 
     case "Java":
-      language.innerHTML = `
+      languageInfoBox.innerHTML = `
         <div class="progress-bars">
           <div class="chart">
             <span>Confidence:</span>
