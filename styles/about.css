@@ -1,4 +1,5 @@
-.about-first-block, .text-image {
+.about-first-block,
+.text-image {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 30px;
@@ -68,19 +69,18 @@ hr {
 }
 
 @media screen and (max-width: 1200px) {
-
-  .about-first-block p, .about-first-block li {
+  .about-first-block p,
+  .about-first-block li {
     font-size: 3.5vw;
   }
 
-  .text-list p, .text-list span {
+  .text-list p,
+  .text-list span {
     font-size: 2vw;
   }
-
 }
 
 @media screen and (max-width: 1000px) {
-
   .about-first-block {
     display: block;
   }
@@ -109,11 +109,15 @@ hr {
     height: 90%;
   }
 
-  .about-first-block p, .about-first-block li {
+  .about-first-block p,
+  .about-first-block li {
     font-size: 35px;
   }
 
-  .text-list p, .text-list span, .image-infotext p, .about-third-block p {
+  .text-list p,
+  .text-list span,
+  .image-infotext p,
+  .about-third-block p {
     font-size: 30px;
   }
 
@@ -126,20 +130,22 @@ hr {
     padding-top: 0;
     margin-top: 60px;
   }
-
 }
 
 @media screen and (max-width: 500px) {
-
   .page-section h2 {
     font-size: 16vw;
   }
 
-  .about-first-block p, .about-first-block li {
+  .about-first-block p,
+  .about-first-block li {
     font-size: 7vw;
   }
 
-  .text-list p, .text-list span, .image-infotext p, .about-third-block p {
+  .text-list p,
+  .text-list span,
+  .image-infotext p,
+  .about-third-block p {
     font-size: 6vw;
   }
 
@@ -162,5 +168,4 @@ hr {
   hr {
     margin: 12vw 0 20px 0;
   }
-
 }

@@ -1,10 +1,12 @@
 // script.js
-const password1 = "p1" && "joe";
+const password1 = "joe";
 const password2 = "p2";
 const password3 = "p3";
 
-let languages = document.getElementsByClassName("language");
+var innerDiv = document.getElementById('login-form-1')
 
+<<<<<<< HEAD
+=======
 document.getElementById("login-form-1").addEventListener("submit", (e) => {
     e.preventDefault();
     const inputPassword = document.getElementById("password-1").value;
@@ -14,25 +16,18 @@ document.getElementById("login-form-1").addEventListener("submit", (e) => {
         alert("Incorrect password!");
     }
 });
+>>>>>>> parent of dac32f3 (d)
 
-document.getElementById("login-form-2").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const inputPassword = document.getElementById("password-2").value;
-    if (inputPassword === password2.toLowerCase) {
-        document.getElementById("tab-2").classList.add("hidden");
-        document.getElementById("tab-3").classList.remove("hidden");
-    } else {
-        alert("Incorrect password!");
-    }
-});
+innerDiv.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-document.getElementById("login-form-3").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const inputPassword = document.getElementById("password-3").value;
-    if (inputPassword === password3.toLowerCase) {
-        document.getElementById("tab-3").classList.add("hidden");
-        document.getElementById("tab-4").classList.remove("hidden");
+    var pass = document.getElementById("password-1").value
+    console.log(pass)
+    if (pass === password1) {
+        console.log("correct")
+        alert("Nice job")
     } else {
-        alert("Incorrect password!");
+        console.log("incorrect")
+        alert("Wrong")
     }
-});
+})
