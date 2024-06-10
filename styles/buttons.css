@@ -14,9 +14,6 @@
   position: relative;
   text-decoration: none;
   width: 80%;
-}
-
-.button1span {
   align-items: center;
   font-family: var(--secondaryFont);
   font-size: 1.6vw;
@@ -34,7 +31,7 @@
   background: radial-gradient(var(--themeColor), var(--secondaryThemeColor));
 }
 
-.button1:hover .button1span {
+.button1:hover {
   color: var(--mainColor);
   box-shadow: inset 10em 0 0 0 var(--blendedColor);
 }
@@ -44,7 +41,7 @@
   outline: none;
 }
 
-.button1:focus .button1span {
+.button1:focus {
   color: var(--mainColor);
   box-shadow: inset 10em 0 0 0 var(--themeColor);
 }
