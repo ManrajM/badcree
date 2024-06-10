@@ -1,4 +1,4 @@
-let languages = document.getElementsByClassName("language");
+let languages = document.getElementsByClassName("outer-language-info-box");
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
     "--mainColor");
 
