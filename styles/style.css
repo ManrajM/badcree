@@ -23,42 +23,47 @@
   outline: none;
 }
 
-html{
+html {
   padding: 0;
   margin: auto;
   font-family: var(--mainFont);
   background-color: black;
   scroll-behavior: smooth;
 }
+
 body {
   padding: 0;
   margin: auto;
   font-family: var(--mainFont);
   background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
   background-size: auto, auto, 100% auto;
-	background-position: center, center, top center;
-	background-repeat: repeat, no-repeat, no-repeat;
-	background-attachment: scroll, scroll, scroll;
+  background-position: center, center, top center;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, scroll;
 }
+
 .icon {
   position: relative;
   top: 720px;
   text-align: center;
   padding: 5px;
 }
+
 i {
   color: white;
   font-size: 40px;
   margin: 5px
 }
+
 p {
-  color: var(--mainTextColor)
+  color: var(--mainTextColor);
 }
 
 h1 {
   font-size: 80px;
   color: var(--mainTextColor);
 }
+
 h2 {
   font-size: 65px;
   margin-bottom: 3%;
@@ -98,6 +103,7 @@ hr {
 .greeting-section h1 {
   text-align: center;
 }
+
 .greeting-section h3 {
   text-align: center;
 }
@@ -180,6 +186,7 @@ hr {
   h1 {
     font-size: 15vw;
   }
+
   h2 {
     font-size: 40px;
   }
@@ -192,6 +199,7 @@ hr {
     font-family: var(--mainFont);
     background-image: none;
   }
+
   h2 {
     padding-top: 50px;
     font-size: 30px;
@@ -205,92 +213,98 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+}
 
+button, input[type="submit"] {
+  background: transparent;
+  color: inherit;
+  border: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: transparent;
+}
 
-  }
-  button, input[type="submit"]{
-    background: transparent;
-    color: inherit;
-    border: transparent;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: transparent;
-  }
+input[type="text"] {
+  text-transform: lowercase;
+}
 
-  input[type="text"]{
-    text-transform: lowercase;
-  }
-  .container{
-    top: -400px;
-    width: 300px;
-    padding: 0px 0px;
-    background: transparent;
-    color: #fff;
-    margin-top: 0;
-    z-index: 10;
-  input, label {
-    width: 100%;
-    z-index: initial;
-    position: static;
-    display: inline;
-    margin-bottom: 15px;
-    padding: 10px 10px;
-    border: 1px solid rgba(255, 57, 57, 0.6);
-    background: rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    color: #fff;
-    outline: none;
-    -webkit-user-select: text;
-    &::placeholder {
-      color: rgba(255, 255, 255, 0.5);
-    }
-  }
-    label {
-      padding: 0;
-      background: none;
-      border: none;
-    
-    input {
-      display: flex;
-      width: auto;
-      padding: 0;
-      margin: 0;
-    }
-    }
-    button {
-      display: flex;
-      width: 100%;
-      padding: 10px;
-      font-weight: bold;
-      background: #000000;
-      border: none;
-      box-shadow: 0 4px 5px rgba(254, 58, 58, 0.3);
-      color: rgba(255,255,255,0.7);
-      transition: all 0.15s ease;
-      position: relative;
-      top: 10px;
-      &:hover {
-      color: rgba(255,255,255,0.9);
-      box-shadow: 0 6px 10px 2px rgba(255, 83, 83, 0.3);
-        
-      }
-      &:active {
-        top: 1px;
-      }
-    }
-    p {
-      text-align: right;
-      a {
-        color: rgba(255,255,255,0.7);
-        font-size: .75rem;
-        transition: all 0.15s ease;
-        &:hover {
-        color: white;
-        }
-      }
-    }
-  }
-  .container-h1 {
-    font-size: 25px;
-  }
+.container {
+  top: 0;
+  width: 300px;
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  margin-top: 0;
+  z-index: 10;
+}
+
+input, label {
+  width: 100%;
+  z-index: initial;
+  position: static;
+  display: inline;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid rgba(255, 57, 57, 0.6);
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #fff;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+label {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  background: #000000;
+  border: none;
+  box-shadow: 0 4px 5px rgba(254, 58, 58, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.15s ease;
+  position: relative;
+  top: 10px;
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 10px 2px rgba(255, 83, 83, 0.3);
+}
+
+button:active {
+  top: 1px;
+}
+
+p {
+  text-align: right;
+}
+
+p a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  transition: all 0.15s ease;
+}
+
+p a:hover {
+  color: white;
+}
+
+.container-h1 {
+  font-size: 25px;
+}
