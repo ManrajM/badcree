@@ -184,6 +184,12 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: auto;
+    font-family: var(--mainFont);
+    background-image: none;
+  }
   h2 {
     font-size: 11vw;
   }
