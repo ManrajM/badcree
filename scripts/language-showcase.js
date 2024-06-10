@@ -39,8 +39,8 @@ function setLanguageInfo(language) {
           <div class="container">
        <h1 class="container-h1">Enter what you've found here...</h1>
           <form action="#">
-            <input type="text" placeholder="Enter Password">
-            <a class="button1" href="mailto:jackgeorgeelia@gmail.com"><span
+            <input type="text" placeholder="Enter Password" class="password-1">
+            <a class="button1"><span
               class="button1span">Test your fate</span></a>
           </form>
         </div>
