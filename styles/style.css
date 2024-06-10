@@ -209,13 +209,13 @@ hr {
 
   }
   button, input[type="submit"]{
-    background: none;
+    background: transparent;
     color: inherit;
-    border: none;
+    border: transparent;
     padding: 0;
     font: inherit;
     cursor: pointer;
-    outline: inherit;
+    outline: transparent;
   }
   .container{
     top: -400px;
