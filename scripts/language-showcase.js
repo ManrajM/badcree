@@ -1,5 +1,5 @@
 let languages = document.getElementsByClassName("language");
-let languageInfoBox = document.getElementsByClassName("language-info-box")[0] // Theres only one
+let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0] // Theres only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
     "--mainColor");
 
@@ -32,69 +32,38 @@ function setLanguageInfo(language) {
   switch (language.getElementsByTagName("p")[1].textContent) {
 
     case "Starting":
-      // languageInfoBox.innerHTML = `
-      
-      // `;
+      languageInfoBox.innerHTML = `
+      <div class = "form-fields-text">
+          <p class="language-description">
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+          </p>
+          <div class="container">
+       <h1 class="container-h1">Enter what you've found here...</h1>
+          <form id="login-form-1">
+            <input type="text" placeholder="Enter Password" id="password-1">
+            <button type="submit" class="button11">Test your fate</button>
+          </form>
+        </div>
+      </div>
+      `;
       // Sets the length of the bars
       break;
 
-    case "Java":
+    case "next":
       languageInfoBox.innerHTML = `
-        <div class="progress-bars">
-          <div class="chart">
-            <span>Confidence:</span>
-            <footer>
-              <div class="progress-bar" id="confidence-bar"></div>
-            </footer>
-          </div>
-          <div class="chart">
-            <span>Enjoyment:</span>
-            <footer>
-              <div class="progress-bar" id="enjoyment-bar"></div>
-            </footer>
-          </div>
-        </div>
-        <p class="language-description">
-          Java was the third language I learned. I started getting better and 
-          more interested in it because it's what my robotics team uses.
-        </p>
-        <div class="example-projects">
-          <div class="project" id="project1">
-            <div class="project-inner">
-              <div class="project-top">
-                <a href="https://jacksonelia.github.io/random-project.html#Bouncy">
-                  <span>Bouncy</span>
-                </a>
-                <p>A simple game that quickly becomes chaos.</p>
-              </div>
-              <div class="project-bottom">
-                <p>Java AWT</p>
-                <a href="https://github.com/jacksonelia/Bouncy" target="_blank">
-                  <i class="ion-social-github-outline"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project" id="project2">
-            <div class="project-inner">
-              <div class="project-top">
-                <a href="https://jacksonelia.github.io/random-project.html#Ethermine_Tracker">
-                  <span>Ether Tracker</span>
-                </a>
-                <p>Tracks a miner address and stores data.</p>
-              </div>
-              <div class="project-bottom">
-                <p>JavaFX - Selenium</p>
-                <a href="https://github.com/jacksonelia/EthermineTracker" target="_blank">
-                  <i class="ion-social-github-outline"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class = "form-fields-text">
+      <p class="language-description">
+        Another thing
+      </p>
+      <div class="container">
+   <h1 class="container-h1">Enter what you've found here...</h1>
+      <form id="login-form-1">
+        <input type="text" placeholder="Enter Password" id="password-1">
+        <button type="submit" class="button11">Test your fate</button>
+      </form>
+    </div>
+  </div>
       `;
-      document.getElementById("confidence-bar").style.cssText = "width: 100%;";
-      document.getElementById("enjoyment-bar").style.cssText = "width: 100%;";
       break;
 
     case "Swift":
