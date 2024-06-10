@@ -314,6 +314,6 @@ p a:hover {
   text-align: center;
 }
 
-.language-info-box {
+.outer-language-info-box {
   z-index: -1;
 }
