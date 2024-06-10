@@ -3,22 +3,9 @@
   width: 100%;
   height: 300px;
   margin-top: 5%;
-  background-color: var(--secondaryColor);
+  background-color: black;
   text-align: center;
-}
-
-.social a {
-  /*font-size: 3vw;*/
-  font-size: 40px;
-  width: 10%;
-  height: 10%;
-  /*line-height: 5vw;*/
-  display: inline-block;
-  text-align: center;
-  margin-top: 4%;
-  color: var(--mainTextColor);
-  opacity: .9;
-  transition: 100s;
+  color: white;
 }
 
 .list-inline {
@@ -42,7 +29,7 @@
 
 .footer ul a {
   text-decoration:none;
-  color: var(--mainTextColor);
+  color: white;
   opacity: .9;
   transition: 100s;
   /*  TODO: fix flickering  */
@@ -57,6 +44,7 @@
   opacity: .6;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: white;
 }
 
 #conway-footer {
@@ -159,6 +147,7 @@
   .copyright {
     font-size: 3vw;
     opacity: .6;
+    color: white;
   }
 
 }
