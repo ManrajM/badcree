@@ -52,7 +52,7 @@ body {
 i {
   color: white;
   font-size: 40px;
-  margin: 5px
+  margin: 5px;
 }
 
 p {
@@ -71,7 +71,7 @@ h2 {
 }
 
 h3 {
-  font: 35px;
+  font-size: 35px;
   color: var(--secondaryTextColor);
 }
 
@@ -230,6 +230,7 @@ input[type="text"] {
 }
 
 .container {
+  position: relative;
   top: 0;
   width: 300px;
   padding: 10px;
@@ -243,68 +244,8 @@ input, label {
   width: 100%;
   z-index: initial;
   position: static;
-  display: inline;
+  display: block;
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid rgba(255, 57, 57, 0.6);
-  background: rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #fff;
-  outline: none;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-label {
-  padding: 0;
-  background: none;
-  border: none;
-}
-
-input {
-  display: block;
-  width: 100%;
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-weight: bold;
-  background: #000000;
-  border: none;
-  box-shadow: 0 4px 5px rgba(254, 58, 58, 0.3);
-  color: rgba(255, 255, 255, 0.7);
-  transition: all 0.15s ease;
-  position: relative;
-  top: 10px;
-}
-
-button:hover {
-  color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 6px 10px 2px rgba(255, 83, 83, 0.3);
-}
-
-button:active {
-  top: 1px;
-}
-
-p {
-  text-align: right;
-}
-
-p a {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.75rem;
-  transition: all 0.15s ease;
-}
-
-p a:hover {
-  color: white;
-}
-
-.container-h1 {
-  font-size: 25px;
-}
+  background: rgba(0, 0, 0, 0.
