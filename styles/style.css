@@ -317,3 +317,8 @@ p a:hover {
 .outer-language-info-box {
   z-index: -1;
 }
+
+.form-fields-text {
+  padding: 50px;
+  margin: 40px;
+}
