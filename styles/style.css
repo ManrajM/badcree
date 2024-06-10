@@ -228,7 +228,6 @@ hr {
     background: transparent;
     color: #fff;
     margin-top: 0;
-    position: absolute;
     z-index: 10;
   input, label {
     width: 100%;
