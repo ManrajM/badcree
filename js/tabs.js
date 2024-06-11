@@ -22,10 +22,9 @@ function selectLanguage(selectedLanguage) {
         background-color: var(--blendedColor);
         border-radius: 100px;
       `;
-      // Sets both the number and language name text color
       language.getElementsByTagName("p")[0].style.color = mainColor;
       language.getElementsByTagName("p")[1].style.color = mainColor;
-      setLanguageInfo(language)
+      setLanguageInfo(language); // Update the languageInfoBox content
     } else {
       language.style.cssText = "";
       language.getElementsByTagName("p")[0].style.cssText = "";
