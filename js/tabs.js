@@ -6,6 +6,9 @@ const mainColor = getComputedStyle(document.documentElement).getPropertyValue("-
 
 let currentLanguageIndex = 0;
 
+// Show the first tab initially
+languages[0].style.display = 'block';
+
 // Add event listeners to the language tabs
 languages.forEach((language, index) => {
   language.addEventListener('click', () => {
@@ -37,11 +40,6 @@ function selectLanguage(index) {
 }
 
 function setLanguageInfo(index) {
-  // Check if content for this index already exists
-  if (document.getElementById(`content-${index}`)) {
-    return;
-  }
-
   const languageContent = [
     {
       title: "Inception",
@@ -58,26 +56,33 @@ function setLanguageInfo(index) {
   ];
 
   const content = languageContent[index];
+  const passwordInputId = `password-${content.title}`;
+  const buttonId = `button-${content.title}`;
+  
+  // Clear the languageInfoBox content
+  languageInfoBox.innerHTML = '';
+  
+  // Create a new tab element
   const newTab = document.createElement("div");
   newTab.className = "language-tab";
-  newTab.id = `content-${index}`;
   newTab.innerHTML = `
     <p class="language-description">${content.description}</p>
     <div class="container">
       <h1 class="container-h1">Enter what you've found here...</h1>
-      <input type="text" placeholder="Enter Password" id="password-${content.title}">
-      <button type="button" class="button11" id="button-${content.title}">Test your fate</button>
+      <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+      <button type="button" class="button11" id="${buttonId}">Test your fate</button>
     </div>
   `;
 
   languageInfoBox.appendChild(newTab);
 
-  document.getElementById(`button-${content.title}`).addEventListener('click', () => {
-    const passwordInput = document.getElementById(`password-${content.title}`).value;
+  document.getElementById(buttonId).addEventListener('click', () => {
+    const passwordInput = document.getElementById(passwordInputId).value;
     if (passwordInput === passwords[index]) {
       alert("Correct! You have unlocked the next level.");
+      // Unlock the next tab
       if (index < languages.length - 1) {
-        selectLanguage(index + 1);
+        languages[index + 1].style.display = 'block';
       } else {
         alert("Congratulations! You've completed all the puzzles.");
       }
