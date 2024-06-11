@@ -35,6 +35,7 @@ function selectLanguage(selectedLanguage) {
 }
 
 function setLanguageInfo(language) {
+  languageInfoBox.innerHTML = ''; // Clear the languageInfoBox content
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
   
