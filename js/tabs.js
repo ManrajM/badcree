@@ -53,10 +53,19 @@ function setLanguageInfo(language) {
         event.preventDefault();
         const inputPassword = document.getElementById("password-1").value;
         if (inputPassword === password1) { 
-          currentLanguageIndex++;
-          languages[currentLanguageIndex].style.display = 'block';
+
+          if (currentLanguageIndex < languages.length - 1) {
+        
+            currentLanguageIndex++;
+        
+            languages[currentLanguageIndex].style.display = 'block';
+        
+          }
+        
         } else {
+        
           alert("Incorrect password!");
+        
         }
       });
       break;
