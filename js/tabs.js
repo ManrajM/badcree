@@ -1,7 +1,7 @@
 let currentLanguageIndex = 0;
 let languages = document.querySelectorAll(".language-tab");
 let languageInfoBox = document.getElementById("language-info-box");
-let passwords = [password1, password2, password3];
+let passwords = ["p1", "p2", "p3"];
 
 function selectLanguage(language) {
   let languageText = language.getElementsByTagName("p")[1].textContent;
