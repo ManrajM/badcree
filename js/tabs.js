@@ -14,8 +14,6 @@ languages.forEach((language, index) => {
 });
 
 let currentLanguageIndex = 0;
-let languages = document.querySelectorAll(".language-tab");
-let languageInfoBox = document.getElementById("language-info-box");
 
 function selectLanguage(language) {
   let languageText = language.getElementsByTagName("p")[1].textContent;
