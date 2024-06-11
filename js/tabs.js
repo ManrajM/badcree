@@ -59,7 +59,7 @@ function setLanguageInfo(language) {
             currentLanguageIndex++;
         
             languages[currentLanguageIndex].style.display = 'block';
-        
+            alert("Correct Password")
           }
         
         } else {
