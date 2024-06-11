@@ -170,10 +170,12 @@ function setLanguageInfo(language) {
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
   
+  // Clear the languageInfoBox content
+  languageInfoBox.innerHTML = '';
+  
   // Create a new tab element
   let newTab = document.createElement("div");
   newTab.className = "language-tab";
-  newTab.style.display = 'none'; // Hide the tab initially
   
   switch (language.getElementsByTagName("p")[1].textContent) {
     case "Inception":
@@ -227,7 +229,6 @@ function setLanguageInfo(language) {
       currentLanguageIndex++;
       languages[currentLanguageIndex].style.display = 'block'; // Show the next tab
       selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
-      newTab.style.display = 'block'; // Show the new tab
     } else {
       alert("Incorrect password!");
     }
