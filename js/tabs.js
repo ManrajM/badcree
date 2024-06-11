@@ -42,7 +42,8 @@ function setLanguageInfo(language) {
   switch (language.getElementsByTagName("p")[1].textContent) {
 
     case "Inception":
-      languageInfoBox.innerHTML = `
+      let newTab = document.createElement("div");
+      newTab.innerHTML = `
       <div class="form-fields-text">
           <p class="language-description">
             Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
@@ -54,13 +55,12 @@ function setLanguageInfo(language) {
           </div>
       </div>
       `;
+      languageInfoBox.appendChild(newTab);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         if (inputPassword === password1) { 
-          languages[currentLanguageIndex].style.display = 'none';
           currentLanguageIndex++;
-          languages[currentLanguageIndex].style.display = 'block';
         } else {
           alert("Incorrect password!");
         }
@@ -68,7 +68,8 @@ function setLanguageInfo(language) {
       break;
 
     case "King of Skies":
-      languageInfoBox.innerHTML = `
+      let newTab2 = document.createElement("div");
+      newTab2.innerHTML = `
       <div class="form-fields-text">
           <p class="language-description">
             Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give you for now.
@@ -80,13 +81,12 @@ function setLanguageInfo(language) {
           </div>
       </div>
       `;
+      languageInfoBox.appendChild(newTab2);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         if (inputPassword === password2) { 
-          languages[currentLanguageIndex].style.display = 'none';
           currentLanguageIndex++;
-          languages[currentLanguageIndex].style.display = 'block';
         } else {
           alert("Incorrect password!");
         }
@@ -94,7 +94,8 @@ function setLanguageInfo(language) {
       break;
 
     case "Worst Nightmare":
-      languageInfoBox.innerHTML = `
+      let newTab3 = document.createElement("div");
+      newTab3.innerHTML = `
         <div class="form-fields-text">
             <p class="language-description">
               Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
@@ -106,13 +107,12 @@ function setLanguageInfo(language) {
             </div>
         </div>
       `;
+      languageInfoBox.appendChild(newTab3);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         if (inputPassword === password3) { 
-          languages[currentLanguageIndex].style.display = 'none';
           currentLanguageIndex++;
-          languages[currentLanguageIndex].style.display = 'block';
         } else {
           alert("Incorrect password!");
         }
