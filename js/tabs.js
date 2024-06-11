@@ -6,8 +6,6 @@ const languages = document.querySelectorAll('.language');
 let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
 
-let currentLanguageIndex = 0;
-
 // Hide all tabs initially
 languages.forEach((language, index) => {
   if (index > 0) {
@@ -15,25 +13,7 @@ languages.forEach((language, index) => {
   }
 });
 
-function selectLanguage(selectedLanguage) {
-  for (const language of languages) {
-    if (language === selectedLanguage) {
-      language.style.cssText = `
-        background-color: var(--blendedColor);
-        border-radius: 100px;
-      `;
-      // Sets both the number and language name text color
-      language.getElementsByTagName("p")[0].style.color = mainColor;
-      language.getElementsByTagName("p")[1].style.color = mainColor;
-      setLanguageInfo(language)
-    } else {
-      language.style.cssText = "";
-      language.getElementsByTagName("p")[0].style.cssText = "";
-      language.getElementsByTagName("p")[1].style.cssText = "";
-      language.style.display = 'none'; // Hide the unselected tabs
-    }
-  }
-}
+let currentLanguageIndex = 0;
 
 function setLanguageInfo(language) {
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
@@ -58,10 +38,9 @@ function setLanguageInfo(language) {
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         if (inputPassword === password1) { 
-          if (currentLanguageIndex < languages.length - 1) {
-            currentLanguageIndex++;
-            languages[currentLanguageIndex].style.display = 'block';
-          }
+          languages[currentLanguageIndex].style.display = 'none';
+          currentLanguageIndex++;
+          languages[currentLanguageIndex].style.display = 'block';
         } else {
           alert("Incorrect password!");
         }
@@ -85,10 +64,9 @@ function setLanguageInfo(language) {
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         if (inputPassword === password2) { 
-          if (currentLanguageIndex < languages.length - 1) {
-            currentLanguageIndex++;
-            languages[currentLanguageIndex].style.display = 'block';
-          }
+          languages[currentLanguageIndex].style.display = 'none';
+          currentLanguageIndex++;
+          languages[currentLanguageIndex].style.display = 'block';
         } else {
           alert("Incorrect password!");
         }
@@ -112,10 +90,9 @@ function setLanguageInfo(language) {
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         if (inputPassword === password3) { 
-          if (currentLanguageIndex < languages.length - 1) {
-            currentLanguageIndex++;
-            languages[currentLanguageIndex].style.display = 'block';
-          }
+          languages[currentLanguageIndex].style.display = 'none';
+          currentLanguageIndex++;
+          languages[currentLanguageIndex].style.display = 'block';
         } else {
           alert("Incorrect password!");
         }
