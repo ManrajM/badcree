@@ -167,7 +167,6 @@ function selectLanguage(selectedLanguage) {
 }
 
 function setLanguageInfo(language) {
-  languageInfoBox.innerHTML = '';
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
   
@@ -225,9 +224,14 @@ function setLanguageInfo(language) {
     const passwords = [password1, password2, password3];
     if (inputPassword === passwords[currentLanguageIndex]) { 
       currentLanguageIndex++;
+      languages[currentLanguageIndex].style.display = 'block'; // Show the next tab
       selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
     } else {
       alert("Incorrect password!");
     }
   });
 }
+
+// Show the first tab initially
+languages[0].style.display = 'block';
+selectLanguage(languages[0]);
