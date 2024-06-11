@@ -58,81 +58,54 @@ function setLanguageInfo(language) {
       // Sets the length of the bars
       break;
 
-    case "next":
+    case "King of Skies":
       languageInfoBox.innerHTML = `
       <div class = "form-fields-text">
-      <p class="language-description">
-        Another thing
-      </p>
-      <div class="container">
-   <h1 class="container-h1">Enter what you've found here...</h1>
-      <form id="login-form-1">
-        <input type="text" placeholder="Enter Password" id="password-1">
-        <button type="submit" class="button11">Test your fate</button>
-      </form>
-    </div>
-  </div>
+          <p class="language-description">
+            Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give for now.
+          </p>
+          <div class="container">
+       <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="password-1">
+            <button type="button" class="button11" id ="newbutt" >Test your fate</button>
+        </div>
+      </div>
       `;
+      document.getElementById("newbutt").addEventListener("click", function (event){
+        event.preventDefault();
+        const inputPassword = document.getElementById("password-1").value;
+        console.log(inputPassword)
+        if (inputPassword === password2) {
+            alert("hello")
+        } else {
+            alert("Incorrect password!");
+        }
+    });
       break;
 
-    case "Swift":
+    case "Worst Nightmare":
       languageInfoBox.innerHTML = `
-        <div class="progress-bars">
-          <div class="chart">
-            <span>Confidence:</span>
-            <footer>
-              <div class="progress-bar" id="confidence-bar"></div>
-            </footer>
-          </div>
-          <div class="chart">
-            <span>Enjoyment:</span>
-            <footer>
-              <div class="progress-bar" id="enjoyment-bar"></div>
-            </footer>
-          </div>
+      <div class = "form-fields-text">
+          <p class="language-description">
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+          </p>
+          <div class="container">
+       <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="password-1">
+            <button type="button" class="button11" id ="newbutt" >Test your fate</button>
         </div>
-        <p class="language-description">
-          Swift was the first language I learned, but I lost interest overtime
-          after I learned Python. I got really "good" at it, even doing machine
-          learning!
-        </p>
-        <div class="example-projects">
-          <div class="project" id="project1">
-            <div class="project-inner">
-              <div class="project-top">
-                <a href="https://jacksonelia.github.io/random-project.html#William_Whitakers_Words_App">
-                  <span>William Whitaker's App</span>
-                </a>
-                <p>A Latin to English translation app.</p>
-              </div>
-              <div class="project-bottom">
-                <p>Swift Soup</p>
-                <a href="https://github.com/jacksonelia/WilliamWhitakersWordsSwiftApp" target="_blank">
-                  <i class="ion-social-github-outline"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project" id="project2">
-            <div class="project-inner">
-              <div class="project-top">
-                <a href="https://jacksonelia.github.io/random-project.html#Block_Drop">
-                  <span>Block Drop</span>
-                </a>
-                <p>A tetris-inspired, block puzzle game. </p>
-              </div>
-              <div class="project-bottom">
-                <p>SwiftUI</p>
-                <a href="https://github.com/jacksonelia/Block-Drop" target="_blank">
-                  <i class="ion-social-github-outline"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
       `;
-      document.getElementById("confidence-bar").style.cssText = "width: 60%;";
-      document.getElementById("enjoyment-bar").style.cssText = "width: 70%;";
+      document.getElementById("newbutt").addEventListener("click", function (event){
+        event.preventDefault();
+        const inputPassword = document.getElementById("password-1").value;
+        console.log(inputPassword)
+        if (inputPassword === password3) {
+            alert("hello")
+        } else {
+            alert("Incorrect password!");
+        }
+    });
       break;
 
     case "JavaScript":
