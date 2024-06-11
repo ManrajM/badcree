@@ -1,19 +1,7 @@
-const password1 = "⊳x⊳୮Ĺo";
-const password2 = "p2";
-const password3 = "p3";
-
-const languages = document.querySelectorAll('.language');
-let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
-const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
-
-// Hide all tabs initially
-languages.forEach((language, index) => {
-  if (index > 0) {
-    language.style.display = 'none';
-  }
-});
-
 let currentLanguageIndex = 0;
+let languages = document.querySelectorAll(".language-tab");
+let languageInfoBox = document.getElementById("language-info-box");
+let passwords = [password1, password2, password3];
 
 function selectLanguage(language) {
   let languageText = language.getElementsByTagName("p")[1].textContent;
@@ -73,21 +61,8 @@ function setLanguageInfo(language) {
   document.getElementById(buttonId).addEventListener("click", function (event) {
     event.preventDefault();
     const inputPassword = document.getElementById(passwordInputId).value;
-    let password;
     
-    switch (currentLanguageIndex) {
-      case 0:
-        password = password1;
-        break;
-      case 1:
-        password = password2;
-        break;
-      case 2:
-        password = password3;
-        break;
-    }
-    
-    if (inputPassword === password) {
+    if (inputPassword === passwords[currentLanguageIndex]) {
       currentLanguageIndex++;
     } else {
       alert("Incorrect password!");
