@@ -11,6 +11,13 @@
   font-size: 3.5vw;
 }
 
+.language {
+  display: none; /* Hide all tabs initially */
+}
+
+.language.active {
+  display: block; /* Show the active tab */
+}
 .language-box {
   float: left;
   width: 33%;
