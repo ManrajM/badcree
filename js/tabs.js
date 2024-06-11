@@ -132,6 +132,13 @@ languages.forEach((language, index) => {
 function selectLanguage(selectedLanguage) {
   for (const language of languages) {
     if (language === selectedLanguage) {
+      language.style.cssText = `
+        background-color: var(--blendedColor);
+        border-radius: 100px;
+      `;
+      // Sets both the number and language name text color
+      language.getElementsByTagName("p")[0].style.color = mainColor;
+      language.getElementsByTagName("p")[1].style.color = mainColor;
       setLanguageInfo(language)
     }
   }
@@ -157,7 +164,6 @@ function setLanguageInfo(language) {
         const inputPassword = document.getElementById("password-1").value;
         if (inputPassword === password1) { // replace with your desired password
           currentLanguageIndex++;
-          languages[currentLanguageIndex - 1].style.display = 'none';
           languages[currentLanguageIndex].style.display = 'block';
         }
       });
@@ -182,7 +188,6 @@ function setLanguageInfo(language) {
         const inputPassword = document.getElementById("password-1").value;
         if (inputPassword === password2) { // replace with your desired password
           currentLanguageIndex++;
-          languages[currentLanguageIndex - 1].style.display = 'none';
           languages[currentLanguageIndex].style.display = 'block';
         }
       });
