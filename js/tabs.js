@@ -191,51 +191,53 @@ function setLanguageInfo(language) {
           <input type="text" placeholder="Enter Password" id="${passwordInputId}">
           <button type="button" class="button11" id="${buttonId}">Test your fate</button>
         </div>
-      `;
-      break;
-
-    case "King of Skies":
-      newTab.innerHTML = `
-        <p class="language-description">
-          Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give you for now.
-        </p>
-        <div class="container">
-          <h1 class="container-h1">Enter what you've found here...</h1>
-          <input type="text" placeholder="Enter Password" id="${passwordInputId}">
-          <button type="button" class="button11" id="${buttonId}">Test your fate</button>
-        </div>
-      `;
-      break;
-
-    case "Worst Nightmare":
-      newTab.innerHTML = `
-        <p class="language-description">
-          Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
-        </p>
-        <div class="container">
-          <h1 class="container-h1">Enter what you've found here...</h1>
-          <input type="text" placeholder="Enter Password" id="${passwordInputId}">
-          <button type="button" class="button11" id="${buttonId}">Test your fate</button>
-        </div>
-      `;
-      break;
-    }
+        `;
+        break;
   
-  // Insert the new tab underneath the old one
-  languageInfoBox.appendChild(newTab);
+      case "King of Skies":
+        newTab.innerHTML = `
+          <p class="language-description">
+            Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give you for now.
+          </p>
+          <div class="container">
+            <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+            <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+          </div>
+        `;
+        break;
   
-  // Add event listener to the button
-  const button = document.getElementById(buttonId);
-  button.addEventListener("click", function (event){
-    event.preventDefault();
-    const inputPassword = document.getElementById(passwordInputId).value;
-    const passwords = [password1, password2, password3];
-    if (inputPassword === passwords[currentLanguageIndex]) { 
-      currentLanguageIndex++;
-      languages[currentLanguageIndex].style.display = 'block'; // Show the next tab
-      selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
-    } else {
-      alert("Incorrect password!");
+      case "Worst Nightmare":
+        newTab.innerHTML = `
+          <p class="language-description">
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+          </p>
+          <div class="container">
+            <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+            <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+          </div>
+        `;
+        break;
     }
-  });
-}
+    
+    // Insert the new tab underneath the old one
+    languageInfoBox.appendChild(newTab);
+    
+    // Add event listener to the button
+    const button = document.getElementById(buttonId);
+    button.addEventListener("click", function (event){
+      event.preventDefault();
+      const inputPassword = document.getElementById(passwordInputId).value;
+      const passwords = [password1, password2, password3];
+      if (inputPassword === passwords[currentLanguageIndex]) { 
+        currentLanguageIndex++;
+        if (currentLanguageIndex < languages.length) {
+          languages[currentLanguageIndex].style.display = 'block'; // Show the next tab
+          selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+        }
+      } else {
+        alert("Incorrect password!");
+      }
+    });
+  }
