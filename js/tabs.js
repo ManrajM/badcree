@@ -140,6 +140,11 @@ function selectLanguage(selectedLanguage) {
       language.getElementsByTagName("p")[1].style.color = mainColor;
       setLanguageInfo(language)
     }
+    else {
+            language.style.cssText = "";
+            language.getElementsByTagName("p")[0].style.cssText = "";
+            language.getElementsByTagName("p")[1].style.cssText = "";
+          }
   }
 }
 function setLanguageInfo(language) {
