@@ -27,10 +27,10 @@ function selectLanguage(selectedLanguage) {
     }
   }
   // Hide all tabs except the selected one
-  for (let i = 0; i < languageInfoBox.children.length; i++) {
-    languageInfoBox.children[i].style.display = "none";
+  for (let i = 1; i < languageInfoBox.children.length; i++) {
+    document.getElementsByClassName("language")[i].style.display = "none";
   }
-  languageInfoBox.getElementsByClassName("form-fields-text")[0].style.display = "block";
+  document.getElementsByClassName("language")[0].style.display = "block";
 }
 
 // Formats the info box based on what language is selected
