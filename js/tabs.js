@@ -190,7 +190,7 @@ function setLanguageInfo(language) {
           <h1 class="container-h1">Enter what you've found here...</h1>
           <input type="text" placeholder="Enter Password" id="${passwordInputId}">
           <button type="button" class="button11" id="${buttonId}">Test your fate</button>
-        </div>
+          </div>
         `;
         break;
   
@@ -235,6 +235,8 @@ function setLanguageInfo(language) {
         if (currentLanguageIndex < languages.length) {
           languages[currentLanguageIndex].style.display = 'block'; // Show the next tab
           selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+        } else {
+          alert("Congratulations! You've reached the end!");
         }
       } else {
         alert("Incorrect password!");
