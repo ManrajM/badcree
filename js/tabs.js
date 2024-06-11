@@ -135,6 +135,7 @@ const password1 = "⊳x⊳୮Ĺo";
 const password2 = "p2";
 const password3 = "p3";
 
+const languageTabs = document.querySelectorAll('.language-tab');
 const languages = document.querySelectorAll('.language');
 let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
@@ -142,30 +143,21 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor")
 let currentLanguageIndex = 0;
 
 
-// Hide all tabs initially
+languageTabs.forEach((tab, index) => {
 
-languages.forEach((language) => {
+  tab.addEventListener('click', () => {
 
-  language.classList.add('hidden');
+    languages.forEach((language) => {
 
-});
+      language.classList.add('hidden');
 
+    });
 
-languages[0].classList.remove('hidden');
-
-
-// Add event listener to each language tab
-
-languages.forEach((language, index) => {
-
-  language.addEventListener('click', () => {
-
-    selectLanguage(index);
+    languages[index].classList.remove('hidden');
 
   });
 
 });
-
 
 function selectLanguage(selectedLanguageIndex) {
 
