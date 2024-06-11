@@ -62,7 +62,7 @@ function setLanguageInfo(language) {
       languageInfoBox.innerHTML = `
       <div class = "form-fields-text">
           <p class="language-description">
-            Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give for now.
+            Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give you for now.
           </p>
           <div class="container">
        <h1 class="container-h1">Enter what you've found here...</h1>
