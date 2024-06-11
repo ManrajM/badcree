@@ -1,11 +1,11 @@
 :root {
-  --mainColor: #121212;
-  --themeColor: #4632ff;
-  --secondaryThemeColor: #5b5c5c;
+  --mainC: #121212;
+  --themeC: #4632ff;
+  --secondaryThemeC: #5b5c5c;
 }
 
 .button2 {
-  background-image: linear-gradient(to right, var(--secondaryThemeColor) 0%, var(--themeColor) 100%);
+  background-image: linear-gradient(to right, var(--secondaryThemeC) 0%, var(--themeC) 100%);
   border-radius: 12px;
   box-sizing: border-box;
   display: block;
@@ -20,8 +20,8 @@
   align-items: center;
   font-family: var(--secondaryFont);
   font-size: 1.6vw;
-  background-color: var(--mainColor);
-  color: var(--themeColor);
+  background-color: var(--mainC);
+  color: var(--themeC);
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -31,22 +31,22 @@
 }
 
 .button2:hover {
-  background: radial-gradient(var(--themeColor), var(--secondaryThemeColor));
+  background: radial-gradient(var(--themeC), var(--secondaryThemeC));
 }
 
 .button2:hover .button2span {
-  color: var(--mainColor);
+  color: var(--mainC);
   box-shadow: inset 10em 0 0 0 var(--blendedColor);
 }
 
 .button2:focus {
-  background: radial-gradient(var(--themeColor), var(--secondaryThemeColor));
+  background: radial-gradient(var(--themeC), var(--secondaryThemeC));
   outline: none;
 }
 
 .button2:focus .button2span {
-  color: var(--mainColor);
-  box-shadow: inset 10em 0 0 0 var(--themeColor);
+  color: var(--mainC);
+  box-shadow: inset 10em 0 0 0 var(--themeC);
 }
 
 @media screen and (max-width: 1000px) {
@@ -63,7 +63,7 @@
 
 
 .button2 {
-  background-image: linear-gradient(to right, var(--secondaryThemeColor) 0%, var(--themeColor) 100%);
+  background-image: linear-gradient(to right, var(--secondaryThemeC) 0%, var(--themeC) 100%);
   border-radius: 12px;
   box-sizing: border-box;
   display: block;
@@ -75,5 +75,5 @@
 }
 
 .button2:hover {
-  background: radial-gradient(var(--themeColor), var(--secondaryThemeColor));
+  background: radial-gradient(var(--themeC), var(--secondaryThemeC));
 }
