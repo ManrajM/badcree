@@ -25,4 +25,6 @@ const typeEffect = () => {
         setTimeout(typeEffect, 1200);
     }
 }
+
+console.log("WHAT ARE YOU DOING IN THE CONSOLE SECTION??")
 typeEffect();
