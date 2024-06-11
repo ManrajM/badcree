@@ -59,7 +59,8 @@ function setLanguageInfo(language) {
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
-        if (inputPassword === password1) { 
+        const passwords = [password1, password2, password3];
+        if (inputPassword === passwords[currentLanguageIndex]) { 
           currentLanguageIndex++;
         } else {
           alert("Incorrect password!");
@@ -85,7 +86,8 @@ function setLanguageInfo(language) {
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
-        if (inputPassword === password2) { 
+        const passwords = [password1, password2, password3];
+        if (inputPassword === passwords[currentLanguageIndex]) { 
           currentLanguageIndex++;
         } else {
           alert("Incorrect password!");
@@ -111,7 +113,8 @@ function setLanguageInfo(language) {
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
-        if (inputPassword === password3) { 
+        const passwords = [password1, password2, password3];
+        if (inputPassword === passwords[currentLanguageIndex]) { 
           currentLanguageIndex++;
         } else {
           alert("Incorrect password!");
