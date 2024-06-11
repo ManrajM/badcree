@@ -26,5 +26,5 @@ const typeEffect = () => {
     }
 }
 
-console.log("WHAT ARE YOU DOING IN THE CONSOLE SECTION??")
+console.log("THOU SHALL NOT BE IN THE CONSOLE AREA, RETURN BACK TO WHERE THOUST WAS JOUST")
 typeEffect();
