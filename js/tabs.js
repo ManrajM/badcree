@@ -135,47 +135,29 @@ const password1 = "⊳x⊳୮Ĺo";
 const password2 = "p2";
 const password3 = "p3";
 
-const languageTabs = document.querySelectorAll('.language-tab');
 const languages = document.querySelectorAll('.language');
 let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
 
 let currentLanguageIndex = 0;
 
-
-languageTabs.forEach((tab, index) => {
-
-  tab.addEventListener('click', () => {
-
-    languages.forEach((language) => {
-
-      language.classList.add('hidden');
-
-    });
-
-    languages[index].classList.remove('hidden');
-
-  });
-
+// Hide all tabs initially
+languages.forEach((language, index) => {
+  if (index > 0) {
+    language.style.display = 'none';
+  }
 });
 
-function selectLanguage(selectedLanguageIndex) {
-
-  languages.forEach((language, index) => {
-
-    if (index === selectedLanguageIndex) {
-
-      language.classList.remove('hidden');
-
+function selectLanguage(selectedLanguage) {
+  languages.forEach((language) => {
+    if (language === selectedLanguage) {
+      language.classList.add('active');
     } else {
-
-      language.classList.add('hidden');
-
+      language.classList.remove('active');
     }
-
   });
-
 }
+
 function setLanguageInfo(language) {
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
