@@ -221,7 +221,9 @@ function setLanguageInfo(language) {
   // Insert the new tab underneath the old one
   languageInfoBox.appendChild(newTab);
   
-  document.getElementById(buttonId).addEventListener("click", function (event){
+  // Add event listener to the button
+  const button = document.getElementById(buttonId);
+  button.addEventListener("click", function (event){
     event.preventDefault();
     const inputPassword = document.getElementById(passwordInputId).value;
     const passwords = [password1, password2, password3];
