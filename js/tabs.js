@@ -15,6 +15,26 @@ languages.forEach((language, index) => {
   }
 });
 
+function selectLanguage(selectedLanguage) {
+  for (const language of languages) {
+    if (language === selectedLanguage) {
+      language.style.cssText = `
+        background-color: var(--blendedColor);
+        border-radius: 100px;
+      `;
+      // Sets both the number and language name text color
+      language.getElementsByTagName("p")[0].style.color = mainColor;
+      language.getElementsByTagName("p")[1].style.color = mainColor;
+      setLanguageInfo(language)
+    } else {
+      language.style.cssText = "";
+      language.getElementsByTagName("p")[0].style.cssText = "";
+      language.getElementsByTagName("p")[1].style.cssText = "";
+      language.style.display = 'none'; // Hide the unselected tabs
+    }
+  }
+}
+
 function setLanguageInfo(language) {
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
