@@ -8,13 +8,6 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor")
 
 let currentLanguageIndex = 0;
 
-// Hide all tabs initially
-languages.forEach((language, index) => {
-  if (index > 0) {
-    language.style.display = 'none';
-  }
-});
-
 // Add event listeners to the tabs
 languages.forEach((language, index) => {
   language.addEventListener('click', () => {
