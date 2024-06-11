@@ -36,6 +36,7 @@ function selectLanguage(selectedLanguage) {
 }
 
 function setLanguageInfo(language) {
+  languageInfoBox.innerHTML = ''; // Clear the languageInfoBox
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
   
@@ -62,6 +63,7 @@ function setLanguageInfo(language) {
         const passwords = [password1, password2, password3];
         if (inputPassword === passwords[currentLanguageIndex]) { 
           currentLanguageIndex++;
+          selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
         } else {
           alert("Incorrect password!");
         }
@@ -89,6 +91,7 @@ function setLanguageInfo(language) {
         const passwords = [password1, password2, password3];
         if (inputPassword === passwords[currentLanguageIndex]) { 
           currentLanguageIndex++;
+          selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
         } else {
           alert("Incorrect password!");
         }
@@ -103,30 +106,24 @@ function setLanguageInfo(language) {
               Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
             </p>
             <div class="container">
-              <h1 class="container-h1">Enter what you've found here...</h1>
-              <input type="text" placeholder="Enter Password" id="${passwordInputId}">
-              <button type="button" class="button11" id="${buttonId}">Test your fate</button>
-            </div>
-        </div>
+            <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+            <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+          </div>
+      </div>
       `;
-      languageInfoBox.appendChild(newTab3);
+      languageInfoBox.appendChild(newTab2);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
         const passwords = [password1, password2, password3];
         if (inputPassword === passwords[currentLanguageIndex]) { 
           currentLanguageIndex++;
+          selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
         } else {
           alert("Incorrect password!");
         }
       });
       break;
+    }
   }
-}
-  
-  // Add event listeners to each language tab
-  languages.forEach((language, index) => {
-    language.addEventListener("click", () => {
-      selectLanguage(language);
-    });
-  });
