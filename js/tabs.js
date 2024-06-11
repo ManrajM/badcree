@@ -128,6 +128,14 @@ languages.forEach((language, index) => {
 });
 
 
+
+function selectLanguage(selectedLanguage) {
+  for (const language of languages) {
+    if (language === selectedLanguage) {
+      setLanguageInfo(language)
+    }
+  }
+}
 function setLanguageInfo(language) {
   switch (language.getElementsByTagName("p")[1].textContent) {
 
