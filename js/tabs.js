@@ -4,8 +4,7 @@ const password3 = "p3";
 
 const languages = document.querySelectorAll('.language');
 let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0] // There's only one
-// const mainColor = getComputedStyle(languages[0]).getPropertyValue(
-//     "--mainColor");
+const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
 
 // // Iterates through the languages and formats the page based on the selected one
 // function selectLanguage(selectedLanguage) {
