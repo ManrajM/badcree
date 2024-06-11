@@ -28,9 +28,8 @@ function selectLanguage(selectedLanguage) {
   }
   // Hide all tabs except the selected one
   for (let i = 1; i < languageInfoBox.children.length; i++) {
-    document.getElementsByClassName("language")[i].style.display = "none";
+    document.getElementsByClassName("language")[i].style.visibility = "hidden";
   }
-  document.getElementsByClassName("language")[0].style.display = "block";
 }
 
 // Formats the info box based on what language is selected
