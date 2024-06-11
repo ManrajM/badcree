@@ -34,9 +34,14 @@ function selectLanguage(selectedLanguage) {
   }
 }
 function setLanguageInfo(language) {
-  languageInfoBox.innerHTML = '';
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
+  
+  // Clear the content inside languageInfoBox
+  let languageInfoBoxContent = languageInfoBox.querySelector(".form-fields-text");
+  if (languageInfoBoxContent) {
+    languageInfoBoxContent.remove();
+  }
   
   switch (language.getElementsByTagName("p")[1].textContent) {
     case "Inception":
@@ -53,7 +58,7 @@ function setLanguageInfo(language) {
           </div>
         </div>
       `;
-      languageInfoBox.appendChild(newTab); // Append the new tab instead of overwriting
+      languageInfoBox.appendChild(newTab);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
@@ -81,7 +86,7 @@ function setLanguageInfo(language) {
           </div>
         </div>
       `;
-      languageInfoBox.appendChild(newTab2); // Append the new tab instead of overwriting
+      languageInfoBox.appendChild(newTab2);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
@@ -109,7 +114,7 @@ function setLanguageInfo(language) {
           </div>
         </div>
       `;
-      languageInfoBox.appendChild(newTab3); // Append the new tab instead of overwriting
+      languageInfoBox.appendChild(newTab3);
       document.getElementById(buttonId).addEventListener("click", function (event){
         event.preventDefault();
         const inputPassword = document.getElementById(passwordInputId).value;
