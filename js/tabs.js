@@ -124,4 +124,3 @@ function selectLanguage(selectedLanguage) {
         break;
       }
     }
-  }
