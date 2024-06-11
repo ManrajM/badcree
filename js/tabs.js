@@ -1,3 +1,18 @@
+const password1 = "⊳x⊳୮Ĺo";
+const password2 = "p2";
+const password3 = "p3";
+
+const languages = document.querySelectorAll('.language');
+let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
+const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
+
+// Hide all tabs initially
+languages.forEach((language, index) => {
+  if (index > 0) {
+    language.style.display = 'none';
+  }
+});
+
 let currentLanguageIndex = 0;
 let languages = document.querySelectorAll(".language-tab");
 let languageInfoBox = document.getElementById("language-info-box");
