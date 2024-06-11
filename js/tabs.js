@@ -149,13 +149,21 @@ languages.forEach((language, index) => {
 });
 
 function selectLanguage(selectedLanguage) {
-  languages.forEach((language) => {
+  for (const language of languages) {
     if (language === selectedLanguage) {
-      language.classList.add('active');
+      language.style.cssText = `
+        background-color: var(--blendedColor);
+        border-radius: 100px;
+      `;
+      language.getElementsByTagName("p")[0].style.color = mainColor;
+      language.getElementsByTagName("p")[1].style.color = mainColor;
+      setLanguageInfo(language); // Update the languageInfoBox content
     } else {
-      language.classList.remove('active');
+      language.style.cssText = "";
+      language.getElementsByTagName("p")[0].style.cssText = "";
+      language.getElementsByTagName("p")[1].style.cssText = "";
     }
-  });
+  }
 }
 
 function setLanguageInfo(language) {
