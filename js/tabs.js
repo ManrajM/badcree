@@ -60,6 +60,7 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password1) {
+            alert("I let you pass that one...");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -88,6 +89,7 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password2) {
+            alert("You are smart, but not as smart as me little one.");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -116,6 +118,7 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password3) {
+            alert("Woah woah woah, I'm going to have to make this harder...");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
