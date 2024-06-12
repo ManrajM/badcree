@@ -1,86 +1,255 @@
+// const password1 = "⊳x⊳୮Ĺo";
+// const password2 = "p2";
+// const password3 = "p3";
+
+// const languages = document.querySelectorAll('.language');
+// let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
+// const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
+
+// let currentLanguageIndex = 0;
+
+// // Hide all tabs initially
+// languages.forEach((language, index) => {
+//   if (index > 0) {
+//     language.style.display = 'none';
+//   }
+// });
+
+// function selectLanguage(selectedLanguage) {
+//   for (const language of languages) {
+//     if (language === selectedLanguage) {
+//       language.style.cssText = `
+//         background-color: var(--blendedColor);
+//         border-radius: 100px;
+//       `;
+//       language.getElementsByTagName("p")[0].style.color = mainColor;
+//       language.getElementsByTagName("p")[1].style.color = mainColor;
+//       setLanguageInfo(language); // Update the languageInfoBox content
+//     } else {
+//       language.style.cssText = "";
+//       language.getElementsByTagName("p")[0].style.cssText = "";
+//       language.getElementsByTagName("p")[1].style.cssText = "";
+//       language.style.display = 'none'; // Hide the unselected tabs
+//     }
+//   }
+// }
+// function setLanguageInfo(language) {
+//   languageInfoBox.innerHTML = '';
+//   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
+//   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
+  
+//   // Clear the content inside languageInfoBox
+//   let languageInfoBoxContent = languageInfoBox.querySelector(".form-fields-text");
+//   if (languageInfoBoxContent) {
+//     languageInfoBoxContent.remove();
+//   }
+  
+//   switch (language.getElementsByTagName("p")[1].textContent) {
+//     case "Inception":
+//       let newTab = document.createElement("div");
+//       newTab.innerHTML = `
+//         <div class="form-fields-text">
+//           <p class="language-description">
+//             Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+//           </p>
+//           <div class="container">
+//             <h1 class="container-h1">Enter what you've found here...</h1>
+//             <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+//             <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+//           </div>
+//         </div>
+//       `;
+//       languageInfoBox.appendChild(newTab);
+//       document.getElementById(buttonId).addEventListener("click", function (event){
+//         event.preventDefault();
+//         const inputPassword = document.getElementById(passwordInputId).value;
+//         const passwords = [password1, password2, password3];
+//         if (inputPassword === passwords[currentLanguageIndex]) { 
+//           currentLanguageIndex++;
+//           selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+//         } else {
+//           alert("Incorrect password!");
+//         }
+//       });
+//       break;
+
+//     case "King of Skies":
+//       let newTab2 = document.createElement("div");
+//       newTab2.innerHTML = `
+//         <div class="form-fields-text">
+//           <p class="language-description">
+//             Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give you for now.
+//           </p>
+//           <div class="container">
+//             <h1 class="container-h1">Enter what you've found here...</h1>
+//             <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+//             <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+//           </div>
+//         </div>
+//       `;
+//       languageInfoBox.appendChild(newTab2);
+//       document.getElementById(buttonId).addEventListener("click", function (event){
+//         event.preventDefault();
+//         const inputPassword = document.getElementById(passwordInputId).value;
+//         const passwords = [password1, password2, password3];
+//         if (inputPassword === passwords[currentLanguageIndex]) { 
+//           currentLanguageIndex++;
+//           selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+//         } else {
+//           alert("Incorrect password!");
+//         }
+//       });
+//       break;
+
+//     case "Worst Nightmare":
+//       let newTab3 = document.createElement("div");
+//       newTab3.innerHTML = `
+//         <div class="form-fields-text">
+//           <p class="language-description">
+//             Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+//           </p>
+//           <div class="container">
+//             <h1 class="container-h1">Enter what you've found here...</h1>
+//             <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+//             <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+//           </div>
+//         </div>
+//       `;
+//       languageInfoBox.appendChild(newTab3);
+//       document.getElementById(buttonId).addEventListener("click", function (event){
+//         event.preventDefault();
+//         const inputPassword = document.getElementById(passwordInputId).value;
+//         const passwords = [password1, password2, password3];
+//         if (inputPassword === passwords[currentLanguageIndex]) { 
+//           currentLanguageIndex++;
+//           selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+//         } else {
+//           alert("Incorrect password!");
+//         }
+//       });
+//       break;
+//     }
+//   }
+
 const password1 = "⊳x⊳୮Ĺo";
 const password2 = "p2";
 const password3 = "p3";
 
 const languages = document.querySelectorAll('.language');
-let languageInfoBox = document.querySelector(".outer-language-info-box"); // There's only one
+let languageInfoBox = document.getElementsByClassName("outer-language-info-box")[0]; // There's only one
 const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor");
 
 let currentLanguageIndex = 0;
 
-// Display the first tab initially
-selectLanguage(languages[0], 0);
+// Show the first tab initially
+languages[0].style.display = 'block';
 
 // Add event listeners to the tabs
 languages.forEach((language, index) => {
   language.addEventListener('click', () => {
-    selectLanguage(language, index);
+    selectLanguage(language);
   });
 });
 
-function selectLanguage(selectedLanguage, index) {
-  // Reset styles for all tabs
-  languages.forEach((language, i) => {
-    if (i === index) {
-      // Set active styles for selected tab
+function selectLanguage(selectedLanguage) {
+  for (const language of languages) {
+    if (language === selectedLanguage) {
       language.style.cssText = `
         background-color: var(--blendedColor);
         border-radius: 100px;
       `;
       language.getElementsByTagName("p")[0].style.color = mainColor;
       language.getElementsByTagName("p")[1].style.color = mainColor;
+      setLanguageInfo(language); // Update the languageInfoBox content
     } else {
-      // Reset styles for other tabs
       language.style.cssText = "";
       language.getElementsByTagName("p")[0].style.cssText = "";
       language.getElementsByTagName("p")[1].style.cssText = "";
     }
-  });
-
-  // Create and insert new tab content
-  let passwordInputId = `password-${index + 1}`;
-  let buttonId = `button-${index + 1}`;
-  let newTabContent = `
-    <div class="form-fields-text">
-      <p class="language-description">
-        Description for tab ${index + 1}
-      </p>
-      <div class="container">
-        <h1 class="container-h1">Enter what you've found here...</h1>
-        <input type="text" placeholder="Enter Password" id="${passwordInputId}">
-        <button type="button" class="button11" id="${buttonId}">Test your fate</button>
-      </div>
-    </div>
-  `;
-
-  // Append new tab content to the language-box section
-  let languageBox = document.querySelector('.language-box');
-  let newTab = document.createElement('div');
-  newTab.className = 'language-tab';
-  newTab.innerHTML = newTabContent;
-  languageBox.appendChild(newTab);
-
-  // Add event listener to the button
-  document.getElementById(buttonId).addEventListener('click', () => {
-    let passwordInput = document.getElementById(passwordInputId);
-    let password = passwordInput.value;
-    let correctPassword;
-    switch (index) {
-      case 0:
-        correctPassword = password1;
-        break;
-      case 1:
-        correctPassword = password2;
-        break;
-      case 2:
-        correctPassword = password3;
-        break;
-    }
-    if (password === correctPassword) {
-      // Unlock the next level or perform other actions
-      console.log("Correct password entered.");
-    } else {
-      alert("Incorrect password. Try again.");
-    }
-  });
+  }
 }
+
+function setLanguageInfo(language) {
+  let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
+  let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
+  
+  // Clear the languageInfoBox content
+  languageInfoBox.innerHTML = '';
+  
+  // Create a new tab element
+  let newTab = document.createElement("div");
+  newTab.className = "language-tab";
+  
+  switch (language.getElementsByTagName("p")[1].textContent) {
+    case "Inception":
+      newTab.innerHTML = `
+        <p class="language-description">
+          Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+        </p>
+        <div class="container">
+          <h1 class="container-h1">Enter what you've found here...</h1>
+          <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+          <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+        </div>
+        `;
+        break;
+      case "King of Skies":
+        newTab.innerHTML = `
+          <p class="language-description">
+            You are about to embark on a journey through a wormhole in search of a new home for humanity. What is the first planet you encounter?
+          </p>
+          <div class="container">
+            <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+            <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+          </div>
+        `;
+        break;
+      case "Worst Nightmare":
+        newTab.innerHTML = `
+          <p class="language-description">
+            You are about to experience time like never before. What is the password to unlock the secrets of the past?
+          </p>
+          <div class="container">
+            <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+            <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+          </div>
+        `;
+        break;
+    }
+    
+    languageInfoBox.appendChild(newTab);
+    
+    // Add event listener to the button
+    document.getElementById(buttonId).addEventListener('click', () => {
+      let passwordInput = document.getElementById(passwordInputId);
+      let password = passwordInput.value;
+      switch (language.getElementsByTagName("p")[1].textContent) {
+        case "Inception":
+          if (password === password1) {
+            alert("Correct! You have unlocked the next level.");
+            // Unlock the next level
+          } else {
+            alert("Incorrect. Try again.");
+          }
+          break;
+        case "King of":
+          if (password === password2) {
+            alert("Correct! You have unlocked the next level.");
+            // Unlock the next level
+          } else {
+            alert("Incorrect. Try again.");
+          }
+          break;
+        case "Worst Nightmare":
+          if (password === password3) {
+            alert("Correct! You have unlocked the next level.");
+            // Unlock the next level
+          } else {
+            alert("Incorrect. Try again.");
+          }
+          break;
+      }
+    });
+  }
