@@ -12,31 +12,27 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue(
 
 let currentLanguageIndex = 0;
 
-// Hide all tabs initially except the first one
-languages.forEach((language, index) => {
-  if (index !== currentLanguageIndex) {
-    language.style.display = "none";
-  }
-});
+// Show the first tab initially
+languages[currentLanguageIndex].classList.add("active");
+setLanguageInfo(languages[currentLanguageIndex]);
 
 function selectLanguage(selectedLanguage) {
-  for (const language of languages) {
-    if (language === selectedLanguage) {
-      language.style.cssText = `
-        background-color: var(--blendedColor);
-        border-radius: 100px;
-        display: block;
-      `;
-      language.getElementsByTagName("p")[0].style.color = mainColor;
-      language.getElementsByTagName("p")[1].style.color = mainColor;
-      setLanguageInfo(language); // Update the languageInfoBox content
-    } else {
-      language.style.cssText = "";
-      language.getElementsByTagName("p")[0].style.cssText = "";
-      language.getElementsByTagName("p")[1].style.cssText = "";
-      language.style.display = "none"; // Hide the unselected tabs
-    }
-  }
+  languages.forEach((language) => {
+    language.classList.remove("active");
+    language.style.cssText = "";
+    language.getElementsByTagName("p")[0].style.cssText = "";
+    language.getElementsByTagName("p")[1].style.cssText = "";
+  });
+
+  selectedLanguage.classList.add("active");
+  selectedLanguage.style.cssText = `
+    background-color: var(--blendedColor);
+    border-radius: 100px;
+  `;
+  selectedLanguage.getElementsByTagName("p")[0].style.color = mainColor;
+  selectedLanguage.getElementsByTagName("p")[1].style.color = mainColor;
+
+  setLanguageInfo(selectedLanguage); // Update the languageInfoBox content
 }
 
 function setLanguageInfo(language) {
@@ -151,6 +147,3 @@ function setLanguageInfo(language) {
       break;
   }
 }
-
-// Initialize the first language info
-setLanguageInfo(languages[currentLanguageIndex]);
