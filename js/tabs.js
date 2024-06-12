@@ -144,6 +144,3 @@ languages.forEach((language) => {
     selectLanguage(language);
   });
 });
-
-// Initialize the first tab as active if needed
-selectLanguage(languages[0]);
