@@ -60,13 +60,7 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password1) {
-            currentLanguageIndex++;
-            if (currentLanguageIndex < languages.length) {
-              alert("I let you pass that one.");
-              selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
-            } else {
-              alert("Congratulations! You've completed all puzzles.");
-            }
+            selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
           }
@@ -94,12 +88,7 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password2) {
-            currentLanguageIndex++;
-            if (currentLanguageIndex < languages.length) {
-              selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
-            } else {
-              alert("Congratulations! You've completed all puzzles.");
-            }
+            selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
           }
@@ -127,17 +116,22 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password3) {
-            currentLanguageIndex++;
-            if (currentLanguageIndex < languages.length) {
-              selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
-            } else {
-              alert("Congratulations! You've completed all puzzles.");
-            }
+            selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
           }
         });
       break;
+  }
+}
+
+function selectNextLanguage(currentLanguage) {
+  const currentIndex = Array.from(languages).indexOf(currentLanguage);
+  const nextIndex = currentIndex + 1;
+  if (nextIndex < languages.length) {
+    selectLanguage(languages[nextIndex]);
+  } else {
+    alert("Congratulations! You've completed all puzzles.");
   }
 }
 
@@ -149,5 +143,4 @@ languages.forEach((language) => {
 });
 
 // Initialize the first tab as active if needed
-let currentLanguageIndex = 0;
-selectLanguage(languages[currentLanguageIndex]);
+selectLanguage(languages[0]);
