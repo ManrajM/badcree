@@ -12,9 +12,9 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue(
 
 let currentLanguageIndex = 0;
 
-// Hide all tabs initially
+// Hide all tabs initially except the first one
 languages.forEach((language, index) => {
-  if (index > 0) {
+  if (index !== currentLanguageIndex) {
     language.style.display = "none";
   }
 });
@@ -25,6 +25,7 @@ function selectLanguage(selectedLanguage) {
       language.style.cssText = `
         background-color: var(--blendedColor);
         border-radius: 100px;
+        display: block;
       `;
       language.getElementsByTagName("p")[0].style.color = mainColor;
       language.getElementsByTagName("p")[1].style.color = mainColor;
@@ -37,6 +38,7 @@ function selectLanguage(selectedLanguage) {
     }
   }
 }
+
 function setLanguageInfo(language) {
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
@@ -72,7 +74,11 @@ function setLanguageInfo(language) {
           const passwords = [password1, password2, password3];
           if (inputPassword === passwords[currentLanguageIndex]) {
             currentLanguageIndex++;
-            selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+            if (currentLanguageIndex < languages.length) {
+              selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+            } else {
+              alert("Congratulations! You've completed all puzzles.");
+            }
           } else {
             alert("Incorrect password!");
           }
@@ -102,7 +108,11 @@ function setLanguageInfo(language) {
           const passwords = [password1, password2, password3];
           if (inputPassword === passwords[currentLanguageIndex]) {
             currentLanguageIndex++;
-            selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+            if (currentLanguageIndex < languages.length) {
+              selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+            } else {
+              alert("Congratulations! You've completed all puzzles.");
+            }
           } else {
             alert("Incorrect password!");
           }
@@ -132,7 +142,11 @@ function setLanguageInfo(language) {
           const passwords = [password1, password2, password3];
           if (inputPassword === passwords[currentLanguageIndex]) {
             currentLanguageIndex++;
-            selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+            if (currentLanguageIndex < languages.length) {
+              selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
+            } else {
+              alert("Congratulations! You've completed all puzzles.");
+            }
           } else {
             alert("Incorrect password!");
           }
@@ -140,3 +154,6 @@ function setLanguageInfo(language) {
       break;
   }
 }
+
+// Initialize the first language info
+setLanguageInfo(languages[currentLanguageIndex]);
