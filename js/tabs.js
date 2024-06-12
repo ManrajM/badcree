@@ -52,7 +52,13 @@ function selectLanguage(selectedLanguage, index) {
       </div>
     </div>
   `;
-  languageInfoBox.innerHTML = newTabContent;
+
+  // Append new tab content to the language-box section
+  let languageBox = document.querySelector('.language-box');
+  let newTab = document.createElement('div');
+  newTab.className = 'language-tab';
+  newTab.innerHTML = newTabContent;
+  languageBox.appendChild(newTab);
 
   // Add event listener to the button
   document.getElementById(buttonId).addEventListener('click', () => {
