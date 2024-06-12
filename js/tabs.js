@@ -3,9 +3,7 @@ const password2 = "p2";
 const password3 = "p3";
 
 const languages = document.querySelectorAll(".language");
-const languageInfoBox = document.getElementsByClassName(
-  "outer-language-info-box",
-)[0];
+const languageInfoBox = document.querySelector(".outer-language-info-box");
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
   "--mainColor",
 );
@@ -46,7 +44,7 @@ function setLanguageInfo(language) {
       newTab.innerHTML = `
         <div class="form-fields-text">
           <p class="language-description">
-            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
           </p>
           <div class="container">
             <h1 class="container-h1">Enter what you've found here...</h1>
@@ -79,7 +77,7 @@ function setLanguageInfo(language) {
       newTab2.innerHTML = `
         <div class="form-fields-text">
           <p class="language-description">
-            Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... Thats all I can give you for now.
+            Have you had enough yet??<br>No? Well I'm sure you will quit now. Refer back to the page you were sent to... That's all I can give you for now.
           </p>
           <div class="container">
             <h1 class="container-h1">Enter what you've found here...</h1>
@@ -112,7 +110,7 @@ function setLanguageInfo(language) {
       newTab3.innerHTML = `
         <div class="form-fields-text">
           <p class="language-description">
-            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mothers mother?
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
           </p>
           <div class="container">
             <h1 class="container-h1">Enter what you've found here...</h1>
@@ -143,13 +141,12 @@ function setLanguageInfo(language) {
 }
 
 // Event listeners for the language tabs
-document.querySelectorAll(".language").forEach((language, index) => {
+languages.forEach((language) => {
   language.addEventListener("click", () => {
     selectLanguage(language);
   });
 });
 
 // Initialize the first tab as active if needed
-if (languages.length > 0) {
-  selectLanguage(languages[0]);
-}
+let currentLanguageIndex = 0;
+selectLanguage(languages[currentLanguageIndex]);
