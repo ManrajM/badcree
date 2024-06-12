@@ -16,3 +16,4 @@ We would appreciate it if you would create a github account and star our project
 
 <h3>Previews of the Website</h3>
 <img src = "./images\website-preview.png">
+<img src = "./images\Puzzles.png">
