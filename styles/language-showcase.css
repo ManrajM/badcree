@@ -1,5 +1,5 @@
 .language {
-    display: none; /* Hide all tabs initially */
+    cursor: pointer;
 }
 
 .language.active {

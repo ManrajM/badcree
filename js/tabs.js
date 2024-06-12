@@ -10,10 +10,10 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue(
   "--mainColor",
 );
 
-// Hide all languages initially
-languages.forEach((language) => {
-  language.style.display = "none";
-});
+// Initially hide all content
+function hideAllContent() {
+  languageInfoBox.innerHTML = ""; // Clear the content inside languageInfoBox
+}
 
 function selectLanguage(selectedLanguage) {
   languages.forEach((language) => {
@@ -35,15 +35,10 @@ function selectLanguage(selectedLanguage) {
 }
 
 function setLanguageInfo(language) {
+  hideAllContent(); // Clear the content inside languageInfoBox
+
   let passwordInputId = `password-${language.getElementsByTagName("p")[1].textContent}`;
   let buttonId = `button-${language.getElementsByTagName("p")[1].textContent}`;
-
-  // Clear the content inside languageInfoBox
-  let languageInfoBoxContent =
-    languageInfoBox.querySelector(".form-fields-text");
-  if (languageInfoBoxContent) {
-    languageInfoBoxContent.remove();
-  }
 
   switch (language.getElementsByTagName("p")[1].textContent) {
     case "Inception":
@@ -151,6 +146,10 @@ function setLanguageInfo(language) {
 document.querySelectorAll(".language").forEach((language, index) => {
   language.addEventListener("click", () => {
     selectLanguage(language);
-    language.style.display = "block";
   });
 });
+
+// Initialize the first tab as active if needed
+if (languages.length > 0) {
+  selectLanguage(languages[0]);
+}
