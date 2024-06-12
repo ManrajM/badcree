@@ -3,18 +3,17 @@ const password2 = "p2";
 const password3 = "p3";
 
 const languages = document.querySelectorAll(".language");
-let languageInfoBox = document.getElementsByClassName(
+const languageInfoBox = document.getElementsByClassName(
   "outer-language-info-box",
-)[0]; // There's only one
+)[0];
 const mainColor = getComputedStyle(languages[0]).getPropertyValue(
   "--mainColor",
 );
 
-let currentLanguageIndex = 0;
-
-// Show the first tab initially
-languages[currentLanguageIndex].classList.add("active");
-setLanguageInfo(languages[currentLanguageIndex]);
+// Hide all languages initially
+languages.forEach((language) => {
+  language.style.display = "none";
+});
 
 function selectLanguage(selectedLanguage) {
   languages.forEach((language) => {
@@ -147,3 +146,11 @@ function setLanguageInfo(language) {
       break;
   }
 }
+
+// Event listeners for the language tabs
+document.querySelectorAll(".language").forEach((language, index) => {
+  language.addEventListener("click", () => {
+    selectLanguage(language);
+    language.style.display = "block";
+  });
+});
