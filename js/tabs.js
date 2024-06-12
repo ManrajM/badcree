@@ -71,8 +71,7 @@ function setLanguageInfo(language) {
         .addEventListener("click", function (event) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
-          const passwords = [password1, password2, password3];
-          if (inputPassword === passwords[currentLanguageIndex]) {
+          if (inputPassword === password1) {
             currentLanguageIndex++;
             if (currentLanguageIndex < languages.length) {
               selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
@@ -105,8 +104,7 @@ function setLanguageInfo(language) {
         .addEventListener("click", function (event) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
-          const passwords = [password1, password2, password3];
-          if (inputPassword === passwords[currentLanguageIndex]) {
+          if (inputPassword === password2) {
             currentLanguageIndex++;
             if (currentLanguageIndex < languages.length) {
               selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
@@ -139,8 +137,7 @@ function setLanguageInfo(language) {
         .addEventListener("click", function (event) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
-          const passwords = [password1, password2, password3];
-          if (inputPassword === passwords[currentLanguageIndex]) {
+          if (inputPassword === password3) {
             currentLanguageIndex++;
             if (currentLanguageIndex < languages.length) {
               selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
