@@ -1,6 +1,9 @@
-const password1 = "⊳x⊳୮Ĺo";
+const password1 = "p1";
 const password2 = "p2";
 const password3 = "p3";
+const password4 = "p4";
+const password5 = "p5";
+const password6 = "p6";
 
 const languages = document.querySelectorAll(".language");
 const languageInfoBox = document.querySelector(".outer-language-info-box");
@@ -31,7 +34,6 @@ function selectLanguage(selectedLanguage) {
 
   setLanguageInfo(selectedLanguage); // Update the languageInfoBox content
 }
-
 function setLanguageInfo(language) {
   hideAllContent(); // Clear the content inside languageInfoBox
 
@@ -91,6 +93,7 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password2) {
             alert("You are smart, but not as smart as me little one.");
+            window.open("https://badcree.xyz/logs/log2.html")
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -120,12 +123,100 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password3) {
             alert("Woah woah woah, I'm going to have to make this harder...");
+            window.open("https://badcree.xyz/logs/log3.html")
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
           }
         });
       break;
+      case "Shapeshifter":
+      let newTab4 = document.createElement("div");
+      newTab4.innerHTML = `
+        <div class="form-fields-text">
+          <p class="language-description">
+            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+          </p>
+          <div class="container">
+            <h1 class="container-h1">Enter what you've found here...</h1>
+            <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+            <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+          </div>
+        </div>
+      `;
+      languageInfoBox.appendChild(newTab4);
+      document
+        .getElementById(buttonId)
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          const inputPassword = document.getElementById(passwordInputId).value;
+          if (inputPassword === password4) {
+            alert("Woah woah woah, I'm going to have to make this harder...");
+            window.open("https://badcree.xyz/logs/log3.html")
+            selectNextLanguage(language);
+          } else {
+            alert("Incorrect password!");
+          }
+        });
+      break;
+      case "Fire":
+        let newTab5 = document.createElement("div");
+        newTab5.innerHTML = `
+          <div class="form-fields-text">
+            <p class="language-description">
+              Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+            </p>
+            <div class="container">
+              <h1 class="container-h1">Enter what you've found here...</h1>
+              <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+              <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+            </div>
+          </div>
+        `;
+        languageInfoBox.appendChild(newTab5);
+        document
+          .getElementById(buttonId)
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            const inputPassword = document.getElementById(passwordInputId).value;
+            if (inputPassword === password5) {
+              alert("I let you pass that one...");
+              window.open("https://badcree.xyz/logs/log4.html")
+              selectNextLanguage(language);
+            } else {
+              alert("Incorrect password!");
+            }
+          });
+        break;
+        case "Last Piece":
+          let newTab6 = document.createElement("div");
+          newTab6.innerHTML = `
+            <div class="form-fields-text">
+              <p class="language-description">
+                Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+              </p>
+              <div class="container">
+                <h1 class="container-h1">Enter what you've found here...</h1>
+                <input type="text" placeholder="Enter Password" id="${passwordInputId}">
+                <button type="button" class="button11" id="${buttonId}">Test your fate</button>
+              </div>
+            </div>
+          `;
+          languageInfoBox.appendChild(newTab6);
+          document
+            .getElementById(buttonId)
+            .addEventListener("click", function (event) {
+              event.preventDefault();
+              const inputPassword = document.getElementById(passwordInputId).value;
+              if (inputPassword === password6) {
+                alert("I let you pass that one...");
+                window.open("https://badcree.xyz/logs/log5.html")
+                selectNextLanguage(language);
+              } else {
+                alert("Incorrect password!");
+              }
+            });
+          break;
   }
 }
 
@@ -135,7 +226,7 @@ function selectNextLanguage(currentLanguage) {
   if (nextIndex < languages.length) {
     selectLanguage(languages[nextIndex]);
   } else {
-    alert("Congratulations! You've completed all puzzles.");
+    alert("You actually did it... I did not expect that. I guess i'll let you go this time.");
   }
 }
 
