@@ -62,7 +62,7 @@ function setLanguageInfo(language) {
           if (inputPassword === password1) {
             currentLanguageIndex++;
             if (currentLanguageIndex < languages.length) {
-              alert("Hahaha, I let you pass that one.");
+              alert("I let you pass that one.");
               selectLanguage(languages[currentLanguageIndex]); // Switch to the next language tab
             } else {
               alert("Congratulations! You've completed all puzzles.");
