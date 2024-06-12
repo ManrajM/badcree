@@ -4,7 +4,7 @@ Throughout the time given for our bad cree reading group "summative" we have tak
 Throughout the website you will be given many (4-5) challenging puzzles which test the knowledge gained from our presentation as well as knowledge gained throughout the website.
 
 We created this website for a multitude of reasons
-<li>Learning and teaching others about the cree language</li>
+<li>Learning and teaching others about the Cree language</li>
 <li>Teaching others about the culture of the Cree peoples</li>
 <li>Learning about Cree culture as well as their stories and the meanings behind them</li>
 <br><br>
@@ -14,5 +14,5 @@ We would appreciate it if you would create a github account and star our project
 <br><br>
 
 
-
+<h3>Previews of the Website</h3>
 <img src = "./images\website-preview.png">
