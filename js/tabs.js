@@ -61,7 +61,7 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password1) {
             alert("I let you pass that one...");
-            window.open("https://badcree.xyz/logs/log2.html","_self")
+            window.open("https://badcree.xyz/logs/log1.html")
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
