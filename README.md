@@ -9,7 +9,7 @@ We created this website for a multitude of reasons
 <li>Learning about Cree culture as well as their stories and the meanings behind them</li>
 <br><br>
 
-<h3>We would appreciate it if you would create a github account and star our project as it took a lot of time and effort to bring this to you all</h3>
+We would appreciate it if you would create a github account and star our project as it took a lot of time and effort to bring this to you all
 
 <br><br>
 
