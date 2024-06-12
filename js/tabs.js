@@ -8,6 +8,9 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue("--mainColor")
 
 let currentLanguageIndex = 0;
 
+// Display the first tab initially
+selectLanguage(languages[0], 0);
+
 // Add event listeners to the tabs
 languages.forEach((language, index) => {
   language.addEventListener('click', () => {
