@@ -8,9 +8,13 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue(
   "--mainColor",
 );
 
-// Initially hide all content
+// Initially hide all content except the first tab
 function hideAllContent() {
-  languageInfoBox.innerHTML = ""; // Clear the content inside languageInfoBox
+  languages.forEach((language, index) => {
+    if (index !== 0) {
+      language.style.display = "none";
+    }
+  });
 }
 
 function selectLanguage(selectedLanguage) {
@@ -60,7 +64,6 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password1) {
-            alert("I let you pass that one...");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -89,7 +92,6 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password2) {
-            alert("You are smart, but not as smart as me little one.");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -118,7 +120,6 @@ function setLanguageInfo(language) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password3) {
-            alert("Woah woah woah, I'm going to have to make this harder...");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -129,9 +130,12 @@ function setLanguageInfo(language) {
 }
 
 function selectNextLanguage(currentLanguage) {
+  const currentIndex = Array;
   const currentIndex = Array.from(languages).indexOf(currentLanguage);
   const nextIndex = currentIndex + 1;
+
   if (nextIndex < languages.length) {
+    languages[nextIndex].style.display = "block";
     selectLanguage(languages[nextIndex]);
   } else {
     alert("Congratulations! You've completed all puzzles.");
