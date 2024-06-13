@@ -44,7 +44,7 @@ body {
 
 .icon {
   position: relative;
-  top: 720px;
+  top: 900px;
   text-align: center;
   padding: 5px;
 }
@@ -172,6 +172,12 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
+  body {
+    padding: 0;
+    margin: auto;
+    font-family: var(--mainFont);
+    background-image: none;
+  }
   .portfolio-div, .contact-div {
     display: block;
   }
@@ -189,6 +195,13 @@ hr {
 
   h2 {
     font-size: 40px;
+  }
+
+  .icon {
+    position: relative;
+    top: 900px;
+    text-align: center;
+    padding: 5px;
   }
 }
 
