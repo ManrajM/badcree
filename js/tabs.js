@@ -11,6 +11,16 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue(
   "--mainColor",
 );
 
+let currentIndex = 0
+languages.forEach((language) => {
+  currentIndex++;
+  if (languages[currentIndex].getElementsByTagName("p")[1].textContent != "Inception") {
+    languages[currentIndex].style.visibilty = hidden;
+  }
+ });
+
+currentIndex = 0;
+ 
 // Initially hide all content
 function hideAllContent() {
   languageInfoBox.innerHTML = ""; // Clear the content inside languageInfoBox
@@ -64,6 +74,7 @@ function setLanguageInfo(language) {
           if (inputPassword === password1) {
             alert("I let you pass that one...");
             window.open("https://badcree.xyz/logs/log1.html")
+            languages[currentIndex + 1].style.visibilty = "visible"
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
