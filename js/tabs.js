@@ -11,25 +11,25 @@ const mainColor = getComputedStyle(languages[0]).getPropertyValue(
   "--mainColor",
 );
 
-let currentIndex = 0
+// Initially hide all languages except "Inception"
 languages.forEach((language) => {
-  currentIndex++;
-  if (languages[currentIndex].getElementsByTagName("p")[1].textContent != "Inception") {
-    languages[currentIndex].style.visibilty = hidden;
+  if (language.getElementsByTagName("p")[1].textContent != "Inception") {
+    language.style.display = "none";
   }
- });
+});
 
-currentIndex = 0;
- 
 // Initially hide all content
 function hideAllContent() {
   languageInfoBox.innerHTML = ""; // Clear the content inside languageInfoBox
 }
-
+let index = 1;
 function selectLanguage(selectedLanguage) {
   languages.forEach((language) => {
     language.classList.remove("active");
-    language.style.cssText = "";
+  //   language.style.cssText = `
+  //   cursor: pointer;
+    
+  // `;
     language.getElementsByTagName("p")[0].style.cssText = "";
     language.getElementsByTagName("p")[1].style.cssText = "";
   });
@@ -74,8 +74,11 @@ function setLanguageInfo(language) {
           if (inputPassword === password1) {
             alert("I let you pass that one...");
             window.open("https://badcree.xyz/logs/log1.html")
-            languages[currentIndex + 1].style.visibilty = "visible"
-            selectNextLanguage(language);
+            languages.forEach((language) => {
+              if (language.getElementsByTagName("p")[1].textContent == "King of Skies") {
+                language.style.display = "block";
+              }
+            });
           } else {
             alert("Incorrect password!");
           }
@@ -239,6 +242,13 @@ function selectNextLanguage(currentLanguage) {
   } else {
     alert("You actually did it... I did not expect that. I guess i'll let you go this time.");
   }
+}
+function showLang(currentLanguage) {
+  const currentIndex = Array.from(languages).indexOf(currentLanguage);
+  const nextIndex = currentIndex + 1;
+  if (nextIndex < languages.length) {
+    language[nextIndex].style.display = "block"
+  } 
 }
 
 // Event listeners for the language tabs
