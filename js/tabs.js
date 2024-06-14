@@ -1,5 +1,5 @@
-const password1 = "⊳x⊳୮Ĺo";
-const password1back = "⊳x⊳୮ĺo";
+const password1 = "ᐅᐦᑯᒥᒫᐤ";
+const password1back = "ᐅᐦᑯᒥĺᐤ";
 const password2 = "guardian";
 const password3 = "wendigo";
 const password4 = "d2VuZGlnbw==";
