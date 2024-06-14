@@ -3,7 +3,7 @@ const password1back = "⊳x⊳୮ĺo";
 const password2 = "guardian";
 const password3 = "wendigo";
 const password4 = "p4";
-const password5 = "p5";
+const password5 = "ialwayswin";
 const password6 = "p6";
 
 const languages = document.querySelectorAll(".language");
@@ -119,12 +119,12 @@ function setLanguageInfo(language) {
         });
       break;
 
-    case "Worst Nightmare":
+    case "Shapeshifter":
       let newTab3 = document.createElement("div");
       newTab3.innerHTML = `
         <div class="form-fields-text">
           <p class="language-description">
-            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+            You've come this far, don't turn back now. There is still a little light at the end of the door. Well there was until I closed it. ᐃᐧᐦᑎᑯᐤ.
           </p>
           <div class="container">
             <h1 class="container-h1">Enter what you've found here...</h1>
@@ -148,12 +148,12 @@ function setLanguageInfo(language) {
           }
         });
       break;
-    case "Shapeshifter":
+    case "Worst Nightmare":
       let newTab4 = document.createElement("div");
       newTab4.innerHTML = `
         <div class="form-fields-text">
           <p class="language-description">
-            Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+            Are you prepared for me to do my worst. I hope not hahaha. ᐃᐧᐦᑎᑯᐤ. Try the 64 Bases approach...
           </p>
           <div class="container">
             <h1 class="container-h1">Enter what you've found here...</h1>
@@ -182,7 +182,7 @@ function setLanguageInfo(language) {
       newTab5.innerHTML = `
           <div class="form-fields-text">
             <p class="language-description">
-              Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+              I will let you pass this one cause I know you will not be able to get the final one....Password is: ialwayswin
             </p>
             <div class="container">
               <h1 class="container-h1">Enter what you've found here...</h1>
@@ -199,7 +199,7 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password5) {
             alert(
-              "I can't believe this, you are getting past all my tricks. Have you done this before?",
+              "Don't get too happy, thats the last free pass you will get.",
             );
             window.open("https://badcree.xyz/logs/log4.html");
             selectNextLanguage(language);
@@ -213,7 +213,7 @@ function setLanguageInfo(language) {
       newTab6.innerHTML = `
             <div class="form-fields-text">
               <p class="language-description">
-                Throughout your journey you will face many tricks and twists, be prepared to go through and escape. What is your mother's mother?
+               Hahaha, this is my last challenge and it only makes sense if it is my hardest. Only the crows in the class will get this one. Find the pattern in the previous log, you will get hints periodically if you wish. Remember all my tricks, the 64 bases, the Cree and English. It's only the <b>first character</b> that counts.
               </p>
               <div class="container">
                 <h1 class="container-h1">Enter what you've found here...</h1>
