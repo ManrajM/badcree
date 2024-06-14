@@ -231,7 +231,6 @@ function setLanguageInfo(language) {
             alert(
               "You actually did it... I did not expect that. I guess i'll let you go this time.",
             );
-            window.open("https://badcree.xyz/logs/uipwiah76.html");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -250,6 +249,7 @@ function selectNextLanguage(currentLanguage) {
     alert(
       "You may have won the battle, but I will be the one who wins the war!",
     );
+    window.open("https://badcree.xyz/logs/uipwiah76.html");
   }
 }
 function showLang(currentLanguage) {
