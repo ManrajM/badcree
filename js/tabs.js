@@ -74,7 +74,7 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password1 || inputPassword === password1back) {
             alert("I let you pass that one...");
-            window.open("https://badcree.xyz/logs/log1.html");
+            window.open("https://badcree.xyz/logs/hy7261.html");
             languages.forEach((language) => {
               if (
                 language.getElementsByTagName("p")[1].textContent ==
@@ -111,7 +111,7 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password2) {
             alert("You are smart, but not as smart as me little one.");
-            window.open("https://badcree.xyz/logs/log2.html");
+            window.open("https://badcree.xyz/logs/er2551h.html");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -141,7 +141,7 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password3) {
             alert("Woah woah woah, I'm going to have to make this harder...");
-            window.open("https://badcree.xyz/logs/log3.html");
+            window.open("https://badcree.xyz/logs/kopwjah27.html");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -170,7 +170,6 @@ function setLanguageInfo(language) {
           const inputPassword = document.getElementById(passwordInputId).value;
           if (inputPassword === password4) {
             alert("Slow down there, I always win...");
-            window.open("https://badcree.xyz/logs/log3.html");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -201,7 +200,7 @@ function setLanguageInfo(language) {
             alert(
               "Don't get too happy, thats the last free pass you will get.",
             );
-            window.open("https://badcree.xyz/logs/log4.html");
+            window.open("https://badcree.xyz/logs/atyqha99.html");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
@@ -232,7 +231,7 @@ function setLanguageInfo(language) {
             alert(
               "You actually did it... I did not expect that. I guess i'll let you go this time.",
             );
-            window.open("https://badcree.xyz/logs/log5.html");
+            window.open("https://badcree.xyz/logs/uipwiah76.html");
             selectNextLanguage(language);
           } else {
             alert("Incorrect password!");
