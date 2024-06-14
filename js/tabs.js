@@ -1,4 +1,5 @@
-const password1 = "⊳x⊳୮Ĺo";
+const password1 = "⊳x⊳୮ĺo";
+const password1back = "⊳x⊳୮ĺo";
 const password2 = "guardian";
 const password3 = "wendigo";
 const password4 = "p4";
@@ -71,7 +72,7 @@ function setLanguageInfo(language) {
         .addEventListener("click", function (event) {
           event.preventDefault();
           const inputPassword = document.getElementById(passwordInputId).value;
-          if (inputPassword === password1) {
+          if (inputPassword === password1 || inputPassword === password1back) {
             alert("I let you pass that one...");
             window.open("https://badcree.xyz/logs/log1.html");
             languages.forEach((language) => {
