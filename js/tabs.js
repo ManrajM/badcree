@@ -2,7 +2,7 @@ const password1 = "⊳x⊳୮ĺo";
 const password1back = "⊳x⊳୮ĺo";
 const password2 = "guardian";
 const password3 = "wendigo";
-const password4 = "p4";
+const password4 = "d2VuZGlnbw==";
 const password5 = "ialwayswin";
 const password6 = "p6";
 
