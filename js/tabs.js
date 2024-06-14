@@ -4,7 +4,7 @@ const password2 = "guardian";
 const password3 = "wendigo";
 const password4 = "d2VuZGlnbw==";
 const password5 = "ialwayswin";
-const password6 = "p6";
+const password6 = "Uw==ᐃG";
 
 const languages = document.querySelectorAll(".language");
 const languageInfoBox = document.querySelector(".outer-language-info-box");
@@ -177,7 +177,7 @@ function setLanguageInfo(language) {
           }
         });
       break;
-    case "Fire":
+    case "Death":
       let newTab5 = document.createElement("div");
       newTab5.innerHTML = `
           <div class="form-fields-text">
@@ -213,7 +213,7 @@ function setLanguageInfo(language) {
       newTab6.innerHTML = `
             <div class="form-fields-text">
               <p class="language-description">
-               Hahaha, this is my last challenge and it only makes sense if it is my hardest. Only the crows in the class will get this one. Find the pattern in the previous log, you will get hints periodically if you wish. Remember all my tricks, the 64 bases, the Cree and English. It's only the <b>first character</b> that counts.
+               Hahaha, this is my last challenge and it only makes sense if it is my hardest. Only the crows in the class will get this one. Find the pattern in the previous log, you will get hints periodically if you wish. Remember all my tricks, the 64 bases, the Cree and English. It's only the <b>first character</b> that counts. try all the combonations...
               </p>
               <div class="container">
                 <h1 class="container-h1">Enter what you've found here...</h1>
